@@ -2,6 +2,7 @@ let app = angular.module("myApp", ["ngRoute"]);
 
 app.config(function ($routeProvider) {
   $routeProvider
+    .when("", { templateUrl: "home.html" })
     .when("/home", { templateUrl: "home.html" })
     .when("/product", { templateUrl: "product.html" })
     .when("/membership", { templateUrl: "membership.html" })
