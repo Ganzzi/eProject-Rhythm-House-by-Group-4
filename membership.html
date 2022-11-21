@@ -1,4 +1,7 @@
 <style>
+  div.container-fluid {
+    justify-content: center;
+  }
   div.button {
     padding: 1vw 0 1vw 0;
     background-color: rgb(246, 229, 207);
@@ -6,38 +9,50 @@
   div.leftMember {
     text-align: center;
   }
+  .list-unstyled li {
+    padding: 0 0 10px 10px;
+    color: rgb(158, 157, 155);
+  }
 </style>
-<div>
-    <div class="row">
-  <div class="leftMember col-12 col-md-5">
-    <div class="photoMember">
+
+<div class="container row" ng-controller="membership">
+  <div class="left-infor col-12 col-md-6">
+    <div class="member-image">
       <img src="image/member.jpg" alt="" class="img-fluid" />
     </div>
-  </div>
-
-  <div class="rightMember col-12 col-md-7 row">
-    <div class="point">
-      <p>Enjoy exclusive VIP membership program with many perks as below:</p>
-      <ul>
+    <div class="cal-point">
+      <p>Member benefits:</p>
+      <ul class="list-unstyled">
         <li>Receive points whenever you make a purchase on website</li>
         <li>Exchange point into discount code for all the products</li>
       </ul>
       <p>
-        Point exchange rate: 1 points = Rs. 10 <br />
-        In order to become VIP member, all you need to do is register and
-        purchase with total of Rs. 200. <br />
+        You will get 20 points with each product bought.
+        <br />
         Below are discount code that you can exhange point into (apply for total
         bill)
       </p>
       <ul>
-        <li>50000 points = 5% coupon x 10</li>
-        <li>100000 points = 10% coupon x 10</li>
-        <li>150000 points = 15% coupon x 10</li>
+        <li>50 points = 5% coupon x 10</li>
+        <li>100 points = 10% coupon x 10</li>
+        <li>150 points = 15% coupon x 10</li>
       </ul>
-    </div>
-
+      <p>
+        <a href="#!">log-in</a> or <a href="">sign-up</a> for now to be a
+        member!
+      </p>
     </div>
   </div>
+  <div class="right-infor col-12 col-md-6" ng-init="log-in: true">
+    <div class="isMember" ng-show="log-in">
+      <p>You are a member!</p>
+      <div class="status">
+        <p>Your Status: <progress value="20" max="100"></progress></p>
+      </div>
     </div>
-    <div class="row"></div>
+    <div class="notMember" ng-hide="log-in">
+      <p>You are not a member? Registry for now!</p>
+      <input type="button" value="Registry" class="btn btn-primary" />
+    </div>
+  </div>
 </div>
