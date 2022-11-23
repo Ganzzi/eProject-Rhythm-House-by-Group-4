@@ -18,11 +18,17 @@
     align-items: center;
     justify-content: center;
   }
-  h1 {
+  h1.title {
     font-size: 3vw;
+    margin-bottom: 10px;
   }
-  .cart {
-    background-color: rgb(123, 122, 122);
+
+  .cart-big {
+    background-color: rgb(197, 196, 196);
+    width: fit-content;
+  }
+  .cart-small {
+    background-color: rgb(197, 196, 196);
     width: fit-content;
   }
 </style>
@@ -99,138 +105,202 @@
   </div>
 
   <div class="row">
-    <div class="left-content col-12 col-md-8">
-      <div class="album row">
-        <h1>Album</h1>
+    <div class="left-content col-12 col-xl-8">
+      <div class="album row py-3">
+        <h1 class="title">Album</h1>
         <div class="album1 col-6">
-          <div class="cart">
+          <div class="cart-big pb-4">
             <img
               src="image/baihathaynhat.jpg"
               alt=""
               width="1920px"
               class="img-fluid"
             />
-            <p>The best song</p>
+            <h3>Name</h3>
+            <h6>Category</h6>
+            <br />
+            <h5>Price</h5>
+            <input type="button" value="Add to cart" class="btn btn-primary" />
           </div>
         </div>
         <div class="album2 col-6">
-          <div class="cart">
+          <div class="cart-big pb-4">
             <img
               src="image/okComputer.png"
               alt=""
               width="1920px"
               class="img-fluid"
             />
-            <p>Ok computer</p>
+            <h3>Name</h3>
+            <h6>Category</h6>
+            <br />
+            <h5>Price</h5>
+            <input type="button" value="Add to cart" class="btn btn-primary" />
           </div>
         </div>
       </div>
 
-      <div class="category row">
-        <h1>Category</h1>
+      <div class="category row py-3">
+        <h1 class="title">Category</h1>
         <div class="category1 col-6">
-          <div class="cart">
+          <div class="cart-big pb-4">
             <img
               src="image/baihathaynhat.jpg"
               alt=""
               width="1920px"
               class="img-fluid"
             />
-            <p>The best song</p>
+            <h3>Name</h3>
+            <h6>Category</h6>
+            <br />
+            <h5>Price</h5>
+            <input type="button" value="Add to cart" class="btn btn-primary" />
           </div>
         </div>
         <div class="category2 col-6">
-          <div class="cart">
+          <div class="cart-big pb-4">
             <img
               src="image/okComputer.png"
               alt=""
               width="1920px"
               class="img-fluid"
             />
-            <p>Ok computer</p>
+            <h3>Name</h3>
+            <h6>Category</h6>
+            <br />
+            <h5>Price</h5>
+            <input type="button" value="Add to cart" class="btn btn-primary" />
           </div>
         </div>
       </div>
     </div>
 
-    <div class="right-content col-12 col-md-4">
+    <div class="right-content col-12 col-xl-4">
       <div class="liveShows">
-        <div class="liveshow row">
-          <h1>Live Shows</h1>
+        <div class="liveshow row py-3">
+          <h1 class="title">Live Shows</h1>
           <div class="liveshow1 col-6">
-            <div class="cart">
+            <div class="cart-small pb-4">
               <img
                 src="image/baihathaynhat.jpg"
                 alt=""
                 width="1920px"
                 class="img-fluid"
               />
-              <p>The best song</p>
+              <h3>Name</h3>
+              <h6>Category</h6>
+              <br />
+              <h5>Price</h5>
+              <input
+                type="button"
+                value="Add to cart"
+                class="btn btn-primary"
+              />
             </div>
           </div>
           <div class="liveshow2 col-6">
-            <div class="cart">
+            <div class="cart-small pb-4">
               <img
                 src="image/okComputer.png"
                 alt=""
                 width="1920px"
                 class="img-fluid"
               />
-              <p>Ok computer</p>
+              <h3>Name</h3>
+              <h6>Category</h6>
+              <br />
+              <h5>Price</h5>
+              <input
+                type="button"
+                value="Add to cart"
+                class="btn btn-primary"
+              />
             </div>
           </div>
         </div>
       </div>
       <div class="contest">
-        <div class="contest row">
-          <h1>Contest</h1>
+        <div class="contest row py-3">
+          <h1 class="title">Contest</h1>
           <div class="contest1 col-6">
-            <div class="cart">
+            <div class="cart-small pb-4">
               <img
                 src="image/baihathaynhat.jpg"
                 alt=""
                 width="1920px"
                 class="img-fluid"
               />
-              <p>The best song</p>
+              <h3>Name</h3>
+              <h6>Category</h6>
+              <br />
+              <h5>Price</h5>
+              <input
+                type="button"
+                value="Add to cart"
+                class="btn btn-primary"
+              />
             </div>
           </div>
           <div class="contest2 col-6">
-            <div class="cart">
+            <div class="cart-small pb-4">
               <img
                 src="image/okComputer.png"
                 alt=""
                 width="1920px"
                 class="img-fluid"
               />
-              <p>Ok computer</p>
+              <h3>Name</h3>
+              <h6>Category</h6>
+              <br />
+              <h5>Price</h5>
+              <input
+                type="button"
+                value="Add to cart"
+                class="btn btn-primary"
+              />
             </div>
           </div>
         </div>
       </div>
       <div class="soldMonthly">
-        <div class="soldMonthly row">
-          <h1>Sold Monthly</h1>
+        <div class="soldMonthly row py-3">
+          <h1 class="title">Sold Monthly</h1>
           <div class="soldMonthly1 col-6">
-            <div class="cart">
+            <div class="cart-small pb-4">
               <img
                 src="image/baihathaynhat.jpg"
                 alt=""
                 width="1920px"
                 class="img-fluid"
               />
-              <p>The best song</p>
+              <h3>Name</h3>
+              <h6>Category</h6>
+              <br />
+              <h5>Price</h5>
+              <input
+                type="button"
+                value="Add to cart"
+                class="btn btn-primary"
+              />
             </div>
           </div>
           <div class="soldMonthly2 col-6">
-            <div class="cart">
+            <div class="cart-small pb-4">
               <img
                 src="image/okComputer.png"
                 alt=""
                 width="1920px"
                 class="img-fluid"
               />
-              <p>Ok computer</p>
+              <h3>Name</h3>
+              <h6>Category</h6>
+              <br />
+              <h5>Price</h5>
+              <input
+                type="button"
+                value="Add to cart"
+                class="btn btn-primary"
+              />
             </div>
           </div>
         </div>
