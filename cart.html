@@ -4,7 +4,7 @@
   }
 </style>
 
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="cart">
   <h1 class="mx-5 mt-5">Shopping Cart</h1>
   <div class="listCart text-center py-2">
     <table class="table">
@@ -18,31 +18,34 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr ng-repeat="eachProduct in listOfCart">
           <td>
             <div class="product row">
               <div class="productImage col-4 text-center">
                 <img
-                  src="image/coco.jpg"
+                  ng-src="{{eachProduct.image}}"
                   alt=""
                   class="img-fluid"
                   width="100px"
                 />
               </div>
               <div class="productTitle col-4 text-start">
-                <p>Name <br />Category <br />Type <br />Year</p>
+                <p>
+                  {{eachProduct.name}} <br />{{eachProduct.category}}
+                  <br />{{eachProduct.type}} <br />{{eachProduct.year}}
+                </p>
               </div>
             </div>
           </td>
-          <td class="PQTR"></td>
+          <td class="PQTR"><p>{{eachProduct.price}}</p></td>
           <td class="PQTR">
             <div class="btn-group">
-              <button class="btn">-</button>
-              <button class="btn">1</button>
-              <button class="btn">+</button>
+              <button class="btn" ng-click="minusQuantity($index)">-</button>
+              <button class="btn">{{eachProduct.quantity}}</button>
+              <button class="btn" ng-click="plusQuantity($index)">+</button>
             </div>
           </td>
-          <td class="PQTR"></td>
+          <td class="PQTR">{{eachProduct.price*eachProduct.quantity}}</td>
           <td class="PQTR">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -55,6 +58,7 @@
               fill="none"
               stroke-linecap="round"
               stroke-linejoin="round"
+              ng-click="delete(eachProduct.name)"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
               <line x1="4" y1="7" x2="20" y2="7"></line>
@@ -102,15 +106,17 @@
       </form>
     </div>
 
-    <div class="orderInfor col-md-6">
+    <div class="orderInfor col-md-6 mb-3">
       <h2>Order Information</h2>
       <div class="tableOrder">
-        <div class="row">
+        <div class="row" ng-repeat="eachProduct in listOfCart">
           <div class="col-8">
-            <p class="orderName">Book x 1</p>
+            <p class="orderName">
+              {{eachProduct.name}} x {{eachProduct.quantity}}
+            </p>
           </div>
           <div class="col-4 text-center">
-            <p>2000</p>
+            <p>{{eachProduct.price*eachProduct.quantity}}</p>
           </div>
         </div>
         <hr />
@@ -119,7 +125,7 @@
             <p class="cartTotal">Cart Total</p>
           </div>
           <div class="col-4 text-center">
-            <p>2000</p>
+            <p>{{cartTotal}}</p>
           </div>
         </div>
         <div class="row">
@@ -127,7 +133,7 @@
             <p class="vat">VAT</p>
           </div>
           <div class="col-4 text-center">
-            <p>2000</p>
+            <p>{{vat}}</p>
           </div>
         </div>
         <div class="row">
@@ -135,7 +141,7 @@
             <p class="shipFee">Ship Fee</p>
           </div>
           <div class="col-4 text-center">
-            <p>2000</p>
+            <p>{{shipFee}}</p>
           </div>
         </div>
         <div class="row">
@@ -143,7 +149,7 @@
             <p class="orderTotal">Order Total</p>
           </div>
           <div class="col-4 text-center">
-            <p>2000</p>
+            <p>{{vat+shipFee+cartTotal}}</p>
           </div>
         </div>
       </div>

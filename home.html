@@ -1,9 +1,4 @@
 <style>
-  * {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
   .liveshow2,
   .liveshow1,
   .album1,
@@ -20,7 +15,7 @@
   }
   h1.title {
     font-size: 3vw;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 
   .cart-big {
@@ -31,9 +26,25 @@
     background-color: rgb(197, 196, 196);
     width: fit-content;
   }
+  .homeContent {
+    background-image: linear-gradient(
+      45deg,
+      rgb(253, 158, 255),
+      rgb(155, 237, 255)
+    );
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .carousel {
+    justify-content: center;
+  }
+  h3 {
+    font-size: 1rem;
+  }
 </style>
-<div class="container-fluid">
-  <div class="carousel row" style="display: flex">
+<div class="container-fluid homeContent" ng-controller="home">
+  <div class="carousel row d-sm-flex d-none">
     <!-- Carousel -->
     <div id="demo" class="carousel slide col-md-10" data-bs-ride="carousel">
       <!-- Indicators/dots -->
@@ -60,7 +71,7 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="image/soul.jpg"
+            src="image/e-product/okComputer.png"
             alt="Los Angeles"
             class="d-block"
             style="width: 100%"
@@ -68,7 +79,7 @@
         </div>
         <div class="carousel-item">
           <img
-            src="image/souloftheforest.jpg"
+            src="image/e-product/souloftheforest.jpg"
             alt="Chicago"
             class="d-block"
             style="width: 100%"
@@ -76,7 +87,7 @@
         </div>
         <div class="carousel-item">
           <img
-            src="image/maylangthang.jpg"
+            src="image/e-product/maylangthang.jpg"
             alt="New York"
             class="d-block"
             style="width: 100%"
@@ -105,202 +116,166 @@
   </div>
 
   <div class="row">
-    <div class="left-content col-12 col-xl-8">
-      <div class="album row py-3">
+    <div class="left-content col-12 col-xl-8 px-3">
+      <div class="album row py-3 mt-4">
         <h1 class="title">Album</h1>
         <div class="album1 col-6">
           <div class="cart-big pb-4">
             <img
-              src="image/baihathaynhat.jpg"
+              ng-src="{{listOfAlbum[0].image}}"
               alt=""
               width="1920px"
               class="img-fluid"
             />
-            <h3>Name</h3>
-            <h6>Category</h6>
+            <h3>{{listOfAlbum[0].name}}</h3>
+            <h6>{{listOfAlbum[0].category}}</h6>
             <br />
-            <h5>Price</h5>
+            <h5>${{listOfAlbum[0].price}}</h5>
             <input type="button" value="Add to cart" class="btn btn-primary" />
           </div>
         </div>
         <div class="album2 col-6">
           <div class="cart-big pb-4">
             <img
-              src="image/okComputer.png"
+              ng-src="{{listOfAlbum[1].image}}"
               alt=""
               width="1920px"
               class="img-fluid"
             />
-            <h3>Name</h3>
-            <h6>Category</h6>
+            <h3>{{listOfAlbum[1].name}}</h3>
+            <h6>{{listOfAlbum[1].category}}</h6>
             <br />
-            <h5>Price</h5>
+            <h5>${{listOfAlbum[1].price}}</h5>
             <input type="button" value="Add to cart" class="btn btn-primary" />
           </div>
         </div>
       </div>
 
-      <div class="category row py-3">
+      <div class="category row py-3 mt-4">
         <h1 class="title">Category</h1>
         <div class="category1 col-6">
           <div class="cart-big pb-4">
             <img
-              src="image/baihathaynhat.jpg"
+              ng-src="{{listOfCategory[0].image}}"
               alt=""
               width="1920px"
               class="img-fluid"
             />
-            <h3>Name</h3>
-            <h6>Category</h6>
+            <h3>{{listOfCategory[0].name}}</h3>
+            <h6>{{listOfCategory[0].category}}</h6>
             <br />
-            <h5>Price</h5>
+            <h5>${{listOfCategory[0].price}}</h5>
             <input type="button" value="Add to cart" class="btn btn-primary" />
           </div>
         </div>
         <div class="category2 col-6">
           <div class="cart-big pb-4">
             <img
-              src="image/okComputer.png"
+              ng-src="{{listOfCategory[1].image}}"
               alt=""
               width="1920px"
               class="img-fluid"
             />
-            <h3>Name</h3>
-            <h6>Category</h6>
+            <h3>{{listOfCategory[1].name}}</h3>
+            <h6>{{listOfCategory[1].category}}</h6>
             <br />
-            <h5>Price</h5>
+            <h5>${{listOfCategory[1].price}}</h5>
             <input type="button" value="Add to cart" class="btn btn-primary" />
           </div>
         </div>
       </div>
     </div>
 
-    <div class="right-content col-12 col-xl-4">
-      <div class="liveShows">
+    <div class="right-content col-12 col-xl-4 px-3">
+      <div class="liveShows my-5">
         <div class="liveshow row py-3">
           <h1 class="title">Live Shows</h1>
           <div class="liveshow1 col-6">
             <div class="cart-small pb-4">
               <img
-                src="image/baihathaynhat.jpg"
+                ng-src="{{listOfLiveshow[0].image}}"
                 alt=""
                 width="1920px"
                 class="img-fluid"
               />
-              <h3>Name</h3>
-              <h6>Category</h6>
-              <br />
-              <h5>Price</h5>
-              <input
-                type="button"
-                value="Add to cart"
-                class="btn btn-primary"
-              />
+              <h3>{{listOfLiveshow[0].name}}</h3>
+              <h6>{{listOfLiveshow[0].category}}</h6>
+              <h5>Year: {{listOfLiveshow[0].year}}</h5>
             </div>
           </div>
           <div class="liveshow2 col-6">
             <div class="cart-small pb-4">
               <img
-                src="image/okComputer.png"
+                ng-src="{{listOfLiveshow[1].image}}"
                 alt=""
                 width="1920px"
                 class="img-fluid"
               />
-              <h3>Name</h3>
-              <h6>Category</h6>
-              <br />
-              <h5>Price</h5>
-              <input
-                type="button"
-                value="Add to cart"
-                class="btn btn-primary"
-              />
+              <h3>{{listOfLiveshow[1].name}}</h3>
+              <h6>{{listOfLiveshow[1].category}}</h6>
+              <h5>Year: {{listOfLiveshow[1].year}}</h5>
             </div>
           </div>
         </div>
       </div>
-      <div class="contest">
+      <div class="contest my-5">
         <div class="contest row py-3">
           <h1 class="title">Contest</h1>
           <div class="contest1 col-6">
             <div class="cart-small pb-4">
               <img
-                src="image/baihathaynhat.jpg"
+                ng-src="{{listOfContest[0].image}}"
                 alt=""
                 width="1920px"
                 class="img-fluid"
               />
-              <h3>Name</h3>
-              <h6>Category</h6>
-              <br />
-              <h5>Price</h5>
-              <input
-                type="button"
-                value="Add to cart"
-                class="btn btn-primary"
-              />
+              <h3>{{listOfContest[0].name}}</h3>
+              <h6>{{listOfContest[0].category}}</h6>
+              <h5>Year: {{listOfContest[0].year}}</h5>
             </div>
           </div>
           <div class="contest2 col-6">
             <div class="cart-small pb-4">
               <img
-                src="image/okComputer.png"
+                ng-src="{{listOfContest[1].image}}"
                 alt=""
                 width="1920px"
                 class="img-fluid"
               />
-              <h3>Name</h3>
-              <h6>Category</h6>
-              <br />
-              <h5>Price</h5>
-              <input
-                type="button"
-                value="Add to cart"
-                class="btn btn-primary"
-              />
+              <h3>{{listOfContest[1].name}}</h3>
+              <h6>{{listOfContest[1].category}}</h6>
+              <h5>Year: {{listOfContest[1].year}}</h5>
             </div>
           </div>
         </div>
       </div>
-      <div class="soldMonthly">
+      <div class="soldMonthly my-5">
         <div class="soldMonthly row py-3">
           <h1 class="title">Sold Monthly</h1>
           <div class="soldMonthly1 col-6">
             <div class="cart-small pb-4">
               <img
-                src="image/baihathaynhat.jpg"
+                ng-src="{{listOfSoldMonthly[0].image}}"
                 alt=""
                 width="1920px"
                 class="img-fluid"
               />
-              <h3>Name</h3>
-              <h6>Category</h6>
-              <br />
-              <h5>Price</h5>
-              <input
-                type="button"
-                value="Add to cart"
-                class="btn btn-primary"
-              />
+              <h3>{{listOfSoldMonthly[0].name}}</h3>
+              <h6>{{listOfSoldMonthly[0].category}}</h6>
+              <h5>Sell {{listOfSoldMonthly[0].soldPerMonth}} per month</h5>
             </div>
           </div>
           <div class="soldMonthly2 col-6">
             <div class="cart-small pb-4">
               <img
-                src="image/okComputer.png"
+                ng-src="{{listOfSoldMonthly[1].image}}"
                 alt=""
                 width="1920px"
                 class="img-fluid"
               />
-              <h3>Name</h3>
-              <h6>Category</h6>
-              <br />
-              <h5>Price</h5>
-              <input
-                type="button"
-                value="Add to cart"
-                class="btn btn-primary"
-              />
+              <h3>{{listOfSoldMonthly[1].name}}</h3>
+              <h6>{{listOfSoldMonthly[1].category}}</h6>
+              <h5>Sell {{listOfSoldMonthly[1].soldPerMonth}} per month</h5>
             </div>
           </div>
         </div>

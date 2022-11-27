@@ -1,5 +1,5 @@
 <style>
-  div.container-fluid {
+  .membershipContent {
     align-items: center;
     justify-content: center;
   }
@@ -54,6 +54,13 @@
     );
     border-radius: 20px;
   }
+
+  .b-left:hover,
+  .b-right:hover {
+    background-color: rgb(233, 72, 110);
+    transition: 1s;
+    background-image: none;
+  }
   .b-inf {
     display: flex;
     justify-content: center;
@@ -63,7 +70,7 @@
     background-image: linear-gradient(
       45deg,
       rgb(230, 62, 227),
-      rgb(255, 1, 107)
+      rgb(157, 26, 250)
     );
     border-radius: 15px;
   }
@@ -79,59 +86,61 @@
   }
 </style>
 
-<div class="container-fluid row" ng-controller="membership">
-  <div class="left-infor col-12 col-md-6">
-    <div class="member-image">
-      <img src="image/member.jpg" alt="" class="img-fluid" />
-    </div>
+<div class="container-fluid" ng-controller="membership">
+  <div class="membershipContent row">
+    <div class="left-infor col-12 col-md-6">
+      <div class="member-image">
+        <img src="image/member.jpg" alt="" class="img-fluid rounded my-3" />
+      </div>
 
-    <div class="cal-point">
-      <div class="benefit">
-        <div class="b-dntf mb-3">
-          <div class="b-ntf">
-            <h1 class="memberBenefit">Member benefits</h1>
+      <div class="cal-point">
+        <div class="benefit">
+          <div class="b-dntf mb-3">
+            <div class="b-ntf">
+              <h1 class="memberBenefit">Member benefits</h1>
+            </div>
+          </div>
+          <div class="b-inf row">
+            <div class="b-left col-12 col-xxl-5">
+              <h6>Receive points when make a purchase</h6>
+            </div>
+            <div class="and col-12 col-xxl-2 align-items-center pt-xxl-4">
+              <h4>AND</h4>
+            </div>
+            <div class="b-right col-12 col-xxl-5">
+              <h6>Exchange point into discount voucher</h6>
+            </div>
+          </div>
+          <div class="pep pt-5 pb-3">
+            <h3>You will get 20 points with each product bought!</h3>
           </div>
         </div>
-        <div class="b-inf row">
-          <div class="b-left col-12 col-xxl-5">
-            <h6>Receive points when make a purchase</h6>
-          </div>
-          <div class="and col-12 col-xxl-2 align-items-center pt-xxl-4">
-            <h4>AND</h4>
-          </div>
-          <div class="b-right col-12 col-xxl-5">
-            <h6>Exchange point into discount voucher</h6>
-          </div>
+        <div class="cal">
+          <h5>
+            Below are discount code that you can exhange point into (apply for
+            total bill)
+          </h5>
+          <ul>
+            <li>50 points = 5% coupon x 10</li>
+            <li>100 points = 10% coupon x 10</li>
+            <li>150 points = 15% coupon x 10</li>
+          </ul>
         </div>
-        <div class="pep pt-5 pb-3">
-          <h3>You will get 20 points with each product bought!</h3>
-        </div>
-      </div>
-      <div class="cal">
-        <h5>
-          Below are discount code that you can exhange point into (apply for
-          total bill)
-        </h5>
-        <ul>
-          <li>50 points = 5% coupon x 10</li>
-          <li>100 points = 10% coupon x 10</li>
-          <li>150 points = 15% coupon x 10</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="right-infor col-12 col-md-6" ng-init="log-in: true">
-    <div class="isMember" ng-show="log-in">
-      <p>You are a member!</p>
-      <div class="status">
-        <p>Your Status: <progress value="20" max="100"></progress></p>
       </div>
     </div>
-    <div class="notMember" ng-hide="log-in">
-      <p id="nmrfn">You are not a member? Registry for now!</p>
-      <a href="#!logInSignUp">
-        <input type="button" value="Registry" class="btn btn-primary" />
-      </a>
+    <div class="right-infor col-12 col-md-6" ng-init="log-in: true">
+      <div class="isMember" ng-show="log-in">
+        <p>You are a member!</p>
+        <div class="status">
+          <p>Your Status: <progress value="20" max="100"></progress></p>
+        </div>
+      </div>
+      <div class="notMember" ng-hide="log-in">
+        <p id="nmrfn">You are not a member? Registry for now!</p>
+        <a href="#!logInSignUp">
+          <input type="button" value="Registry" class="btn btn-primary" />
+        </a>
+      </div>
     </div>
   </div>
 </div>
