@@ -37,7 +37,7 @@
       "name": "A Star is Born",
       "product-type": "Product",
       "type": "CD",
-      "category": "movie",
+      "category": "band",
       "year": "2018",
       "describe": "A Star is Born immerses viewers in the burning love of the two main characters along with the melodies of the music. Country singer Jack 'Jackson' Maine (Bradley Cooper) and amateur female musician Ally (Lady Gaga) are so attracted to each other, they spend their sweet, romantic days together. Every gesture and action contains emotions that are difficult to put into words. But every song must end, their love story also gradually touches tragedy. Having 'burned' together with music, in harmony in their souls and emotions, the two characters could not be together, the ending of the work makes viewers haunted because it is too sad.",
       "price": 150.0
@@ -52,6 +52,61 @@
       "year": "2020",
       "describe": "Soul - a film about jazz music received a lot of positive feedback from the audience because of its humane and meaningful plot. The work revolves around the character Joe Gardner - a teacher who always thought he was born to devote himself to Jazz music but now harshly entrenched him in high school. Not giving up, Joe Gardner succeeded in the session. audition with idols. But before officially creating the concert of his life, Joe Gardner suddenly had an accident. Unwilling to face such an unjust departure, Joe Gardner struggled in the land of The Great Before and found a chance to return home.",
       "price": 160.0
+    },
+
+    {
+      "image": "",
+      "name": "The Beatles ",
+      "product-type": "Product",
+      "type": "",
+      "category": "band",
+      "year": "1960",
+      "describe": "Pop music is popular music and easily attracts audiences thanks to its popularity and easy listening. To talk about the dance bands that have succeeded with pop music, it is impossible not to mention the number one position belongs to The Beatles.The boy band with legendary names like Paul McCartney, George Harrison, Ringo Starr, John Lennon, Stu Sutcliffe, Pete Best, who created a lot of pop-rock songs that attracted thousands of people in concerts as well. as sales of more than 600 million records have ever been sold in the market.",
+      "price": 170.0
+    },
+
+    {
+      "image": "",
+      "name": "The Supremes",
+      "product-type": "Product",
+      "type": "",
+      "category": "band",
+      "year": "1960",
+      "describe": "The group of female members has come together to deliver many groundbreaking songs. Their hits still leave an impression on the audience because of the classics of the pop genre combined with pristine R&B/soul such as You Can't Hurry Love, Baby Love and Stop, In the Name of Love. Anyone who has ever heard the music of The Supremes must refrain from dancing to the music they create.",
+      "price": 180.0
+    },
+
+    {
+      "image": "",
+      "name": "The Beach Boys  ",
+      "product-type": "Product",
+      "type": "",
+      "category": "band",
+      "year": "1961",
+      "describe": "The group formed in 1961 has bold images of dreams from the American suburbs. The most prominent member and also the leader of the group is Brian Wilson. The music of The Beach Boys is considered balanced, showing the ingenuity of combining popular tunes with more daring choruses that can be heard every day. The group also entered the US charts many times.",
+      "price": 200.0
+    },
+
+    {
+      "image": "",
+      "name": "'24 hours' - Sunmi  ",
+      "product-type": "Product",
+      "type": "",
+      "category": "solo performance",
+      "year": "2013",
+      "describe": "Away from the Kpop stage for a long time to focus on his academic career, the former member of Wonder Girls had a really impressive comeback with 24 hours.With a rhythmic, seductive dance and tango melody and Sunmi's powerful voice, 24 hours makes the audience have to replay continuously if they miss it once. The proof is that after being released, this song has swept all major online music charts in Korea, such as Melon, Mnet, Daum, Naver, etc.It has been more than 3 years since leaving Wonder Girls, this comeback Sunmi not only 'makeovers' with a sexy and sexy concept but also impresses Kpop fans with her obvious maturity in her voice.Debuting as a solo singer means that Sunmi will have to start over from the starting line. There is still a long way to go for Sunmi's efforts, but with remarkable success thanks to 24 hours, hopefully Sunmi will continue to try and produce quality music products in the near future.",
+      "price": 180.0
+    },
+
+    {
+      "image": "",
+      "name": "'Coup d’etat' - G-Dragon   ",
+      "product-type": "Product",
+      "type": "",
+      "category": "solo performance",
+      "year": "2013",
+      "describe": "2013 can be considered as the year of the big victory of the YG family and also the year of the big award for the leader of Big Bang.At the recent MAMA award ceremony, GD won four important awards: Artist of the year, Best Male Artist, and Best solo dance performance. (Best Dance Performance-Male solo), Best MV (Nissan Juke Best Music Video).Working solo since 2009 and continuously producing excellent products, in 2013, GD continued to release the album Coup d'etat. Before being released, this album proved its huge attraction when bringing YG 300,000 orders in Korea alone.Included in this album are 14 songs with 4 title songs: Who you, Black, Crooked and Niliria. MV Crooked alone reached 4 million views within 10 days. Immediately after being released, the songs on the album also continuously remained in the top 10 most listened songs on online music charts. Coup d'etat also helped G-Dragon become the highest-ranking Asian Artist on the iTunes Global Artist Chart.",
+      "price": 200.0
     }
   ],
   "liveshow": [
@@ -61,7 +116,7 @@
       "product-type": "Liveshow",
       "type": "",
       "category": "",
-      "date": "2015",
+      "year": "2015",
       "describe": "For a long time, the city of Da Lat has become a symbol of romance and dream, and the Wandering Clouds is no exception to this rule. May Lang Thang is a combination of homestays, cafes, restaurants and even pubs. But most young people who love music, or love Da Lat, know about May Lang Thang through 'music nights in the clouds'. A feature of these concerts is that they are held at 16:30 - a beautiful time. The most beautiful day of the day with 'clouds hanging overhead and sunshine overhead' surrounded by mountains and hills, with golden sunshine and pink clouds. The 'in the clouds' stage since its inception has gathered the hottest names in the village. Vietnamese music such as Phan Manh Quynh, Trung Quan, Nguyen Ha, Vu Cat Tuong, Thuy Chi, Ha Nhi, Vu, ... The space is bold in the mountains and hills of Da Lat with a panoramic view of the city and the entrance road. the winding, precarious part, but that's also why 'Music Night in the Clouds' brings unique experiences to the audience. When the coolness of Da Lat's atmosphere mixes with lively melodies and live-band will be make you have a relaxing and peaceful experience when coming to this place."
     },
 
@@ -71,7 +126,7 @@
       "product-type": "Liveshow",
       "type": "",
       "category": "",
-      "date": "2016",
+      "year": "2016",
       "describe": "True to its poetic name, Soul of the Forest is held in the middle of a pine forest, within the campus of Flamingo Dai Lai Resort - Top 10 most beautiful resorts in the world in Vinh Phuc, about 45 minutes away from Hanoi. With the main concept Inspired by the romantic and mystical pine forest, Soul of the Forest focuses on the audience's connection with the singer and with the music. Under the pine trees, the stage is designed in a rustic style, along with an arc-shaped seating area to create a feeling of warmth and closeness. The guests of the night are famous names such as Ha Tran, Le Quyen, Uyen Linh, Bang Kieu, Le Hieu, Lan Nha, Bui Lan Huong,... Soul of the Forest have been telling audiences stories of music that move their souls. Not only being immersed in the tunes in a relaxing space, the audience will also enjoy the impressive works of art in the collection of the Flamingo Museum of Contemporary Art. The combination of nature - music - art at Soul of the Forest will definitely be an unforgettable experience."
     }
   ],
@@ -110,6 +165,50 @@
       "type": "Album",
       "year": 1975,
       "describe": ""
+    }
+  ],
+  "category": [
+    {
+      "image": "coco.jpg",
+      "name": "Coco ",
+      "product-type": "Product",
+      "type": "DVD",
+      "category": "movie",
+      "year": "2017",
+      "describe": "Coco made a strong impression on the audience with the story of the burning, intense and emotional love of music that even adults watching the movie had to cry. The movie project of the animation studio Pixar is truly a party of emotions when it brings to the audience perfect footage, reaching the pinnacle of art. The content of the animated film revolves around Miguel. – the boy always has an undying love for music, but his family always opposes and wants him to follow in the family career to become a traditional shoemaker. In an argument with Mrs. Elena, he got involved. Join a festival for the dead and trapped in a mysterious land. Here, Miguel went with his dog Dante to find the soul of Ernesto - the musical idol in his heart for a long time.",
+      "price": 120.0
+    },
+    {
+      "image": "astartisborn.jpg",
+      "name": "A Star is Born",
+      "product-type": "Product",
+      "type": "CD",
+      "category": "band",
+      "year": "2018",
+      "describe": "A Star is Born immerses viewers in the burning love of the two main characters along with the melodies of the music. Country singer Jack 'Jackson' Maine (Bradley Cooper) and amateur female musician Ally (Lady Gaga) are so attracted to each other, they spend their sweet, romantic days together. Every gesture and action contains emotions that are difficult to put into words. But every song must end, their love story also gradually touches tragedy. Having 'burned' together with music, in harmony in their souls and emotions, the two characters could not be together, the ending of the work makes viewers haunted because it is too sad.",
+      "price": 150.0
+    }
+  ],
+  "soldMonthly": [
+    {
+      "image": "coco.jpg",
+      "name": "Coco ",
+      "product-type": "Product",
+      "type": "DVD",
+      "category": "movie",
+      "year": "2017",
+      "describe": "Coco made a strong impression on the audience with the story of the burning, intense and emotional love of music that even adults watching the movie had to cry. The movie project of the animation studio Pixar is truly a party of emotions when it brings to the audience perfect footage, reaching the pinnacle of art. The content of the animated film revolves around Miguel. – the boy always has an undying love for music, but his family always opposes and wants him to follow in the family career to become a traditional shoemaker. In an argument with Mrs. Elena, he got involved. Join a festival for the dead and trapped in a mysterious land. Here, Miguel went with his dog Dante to find the soul of Ernesto - the musical idol in his heart for a long time.",
+      "price": 120.0
+    },
+    {
+      "image": "soul.jpg",
+      "name": "Soul ",
+      "product-type": "Product",
+      "type": "Tape",
+      "category": "movie",
+      "year": "2020",
+      "describe": "Soul - a film about jazz music received a lot of positive feedback from the audience because of its humane and meaningful plot. The work revolves around the character Joe Gardner - a teacher who always thought he was born to devote himself to Jazz music but now harshly entrenched him in high school. Not giving up, Joe Gardner succeeded in the session. audition with idols. But before officially creating the concert of his life, Joe Gardner suddenly had an accident. Unwilling to face such an unjust departure, Joe Gardner struggled in the land of The Great Before and found a chance to return home.",
+      "price": 160.0
     }
   ]
 }

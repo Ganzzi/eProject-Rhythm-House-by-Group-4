@@ -71,27 +71,33 @@
 
   <div class="orderInfor row">
     <div class="formInfor col-md-6">
-      <form action="" class="form">
+      <form action="" class="form" id="formInfor">
         <h2 for="" class="">Your Information</h2>
         <input
           class="form-control p-2 my-2 mx-auto"
           type="text"
+          pattern="\w{1}[\d\w\s]{1,20}"
+          required
           placeholder="Enter Your Name"
         />
         <input
           class="form-control p-2 my-2 mx-auto"
           type="email"
           placeholder="Enter Your Email"
+          required
         />
         <input
           class="form-control p-2 my-2 mx-auto"
           type="text"
           placeholder="Enter Your Phone Number"
+          required
+          pattern="\d{7,11}"
         />
         <input
           class="form-control p-2 my-2 mx-auto"
           type="text"
           placeholder="Enter Your Address"
+          required
         />
       </form>
     </div>
@@ -100,49 +106,54 @@
       <h2>Order Information</h2>
       <div class="tableOrder">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-8">
             <p class="orderName">Book x 1</p>
           </div>
-          <div class="col-md-4 text-center">
+          <div class="col-4 text-center">
             <p>2000</p>
           </div>
         </div>
         <hr />
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-8">
             <p class="cartTotal">Cart Total</p>
           </div>
-          <div class="col-md-4 text-center">
+          <div class="col-4 text-center">
             <p>2000</p>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-8">
             <p class="vat">VAT</p>
           </div>
-          <div class="col-md-4 text-center">
+          <div class="col-4 text-center">
             <p>2000</p>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-8">
             <p class="shipFee">Ship Fee</p>
           </div>
-          <div class="col-md-4 text-center">
+          <div class="col-4 text-center">
             <p>2000</p>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-8">
             <p class="orderTotal">Order Total</p>
           </div>
-          <div class="col-md-4 text-center">
+          <div class="col-4 text-center">
             <p>2000</p>
           </div>
         </div>
       </div>
       <div class="buttonOrder text-center">
-        <input type="button" value="Order" class="btn btn-danger" />
+        <input
+          type="submit"
+          form="formInfor"
+          value="Order"
+          class="btn btn-danger"
+        />
       </div>
     </div>
   </div>
