@@ -41,12 +41,12 @@ app.controller("index", function ($scope) {});
 app.controller("home", function ($scope) {
   $scope.addAlbumToCart = function (index) {
     $scope.listOfCart.push($scope.listOfAlbum[index]);
-    alert("add succesfully");
+    alert("Add successfully!");
   };
 
   $scope.addCategoryToCart = function (index) {
     $scope.listOfCart.push($scope.listOfCategory[index]);
-    alert("add succesfully");
+    alert("Add successfully!");
   };
 });
 
@@ -58,7 +58,18 @@ app.controller("product", function ($scope) {
       $scope.listOfCart[$scope.listOfCart.indexOf($scope.listOfProduct[index])]
         .quantity++;
     }
-    alert("add succesfully");
+    alert("Add successfully!");
+  };
+
+  $scope.showModal = function (index) {
+    $scope.productModal = [];
+    $scope.productModal.push($scope.listOfProduct[index]);
+    console.log($scope.productModal[0]);
+    $scope.manualModal = { display: "block" };
+  };
+
+  $scope.closeModal = function () {
+    $scope.manualModal = { display: "none" };
   };
 });
 

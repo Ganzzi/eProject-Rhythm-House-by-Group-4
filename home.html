@@ -39,8 +39,13 @@
   .carousel {
     justify-content: center;
   }
-  h3 {
+  h3.Title {
     font-size: 1rem;
+    margin-top: 10px;
+    font-weight: 700;
+  }
+  h3.Title:hover {
+    color: rgb(180, 15, 15);
   }
 </style>
 <div class="container-fluid homeContent" ng-controller="home">
@@ -126,8 +131,12 @@
               alt=""
               width="1920px"
               class="img-fluid"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal1"
             />
-            <h3>{{listOfAlbum[0].name}}</h3>
+            <h3 class="Title" data-bs-toggle="modal" data-bs-target="#myModal1">
+              {{listOfAlbum[0].name}}
+            </h3>
             <h6>{{listOfAlbum[0].category}}</h6>
             <br />
             <h5>${{listOfAlbum[0].price}}</h5>
@@ -146,8 +155,12 @@
               alt=""
               width="1920px"
               class="img-fluid"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal2"
             />
-            <h3>{{listOfAlbum[1].name}}</h3>
+            <h3 class="Title" data-bs-toggle="modal" data-bs-target="#myModal2">
+              {{listOfAlbum[1].name}}
+            </h3>
             <h6>{{listOfAlbum[1].category}}</h6>
             <br />
             <h5>${{listOfAlbum[1].price}}</h5>
@@ -170,8 +183,12 @@
               alt=""
               width="1920px"
               class="img-fluid"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal3"
             />
-            <h3>{{listOfCategory[0].name}}</h3>
+            <h3 class="Title" data-bs-toggle="modal" data-bs-target="#myModal3">
+              {{listOfCategory[0].name}}
+            </h3>
             <h6>{{listOfCategory[0].category}}</h6>
             <br />
             <h5>${{listOfCategory[0].price}}</h5>
@@ -190,8 +207,12 @@
               alt=""
               width="1920px"
               class="img-fluid"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal4"
             />
-            <h3>{{listOfCategory[1].name}}</h3>
+            <h3 class="Title" data-bs-toggle="modal" data-bs-target="#myModal4">
+              {{listOfCategory[1].name}}
+            </h3>
             <h6>{{listOfCategory[1].category}}</h6>
             <br />
             <h5>${{listOfCategory[1].price}}</h5>
@@ -217,8 +238,16 @@
                 alt=""
                 width="1920px"
                 class="img-fluid"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal5"
               />
-              <h3>{{listOfLiveshow[0].name}}</h3>
+              <h3
+                class="Title"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal5"
+              >
+                {{listOfLiveshow[0].name}}
+              </h3>
               <h6>{{listOfLiveshow[0].category}}</h6>
               <h5>Year: {{listOfLiveshow[0].year}}</h5>
             </div>
@@ -230,8 +259,16 @@
                 alt=""
                 width="1920px"
                 class="img-fluid"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal6"
               />
-              <h3>{{listOfLiveshow[1].name}}</h3>
+              <h3
+                class="Title"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal6"
+              >
+                {{listOfLiveshow[1].name}}
+              </h3>
               <h6>{{listOfLiveshow[1].category}}</h6>
               <h5>Year: {{listOfLiveshow[1].year}}</h5>
             </div>
@@ -248,8 +285,16 @@
                 alt=""
                 width="1920px"
                 class="img-fluid"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal7"
               />
-              <h3>{{listOfContest[0].name}}</h3>
+              <h3
+                class="Title"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal7"
+              >
+                {{listOfContest[0].name}}
+              </h3>
               <h6>{{listOfContest[0].category}}</h6>
               <h5>Year: {{listOfContest[0].year}}</h5>
             </div>
@@ -261,8 +306,16 @@
                 alt=""
                 width="1920px"
                 class="img-fluid"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal8"
               />
-              <h3>{{listOfContest[1].name}}</h3>
+              <h3
+                class="Title"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal8"
+              >
+                {{listOfContest[1].name}}
+              </h3>
               <h6>{{listOfContest[1].category}}</h6>
               <h5>Year: {{listOfContest[1].year}}</h5>
             </div>
@@ -279,25 +332,539 @@
                 alt=""
                 width="1920px"
                 class="img-fluid"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal9"
               />
-              <h3>{{listOfSoldMonthly[0].name}}</h3>
+              <h3
+                class="Title"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal9"
+              >
+                {{listOfSoldMonthly[0].name}}
+              </h3>
               <h6>{{listOfSoldMonthly[0].category}}</h6>
               <h5>Sell {{listOfSoldMonthly[0].soldPerMonth}} per month</h5>
             </div>
           </div>
           <div class="soldMonthly2 col-6">
-            <div class="cart-small pb-4">
+            <div
+              class="cart-small pb-4"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal10"
+            >
               <img
                 ng-src="{{listOfSoldMonthly[1].image}}"
                 alt=""
                 width="1920px"
                 class="img-fluid"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal10"
               />
-              <h3>{{listOfSoldMonthly[1].name}}</h3>
+              <h3
+                class="Title"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal10"
+              >
+                {{listOfSoldMonthly[1].name}}
+              </h3>
               <h6>{{listOfSoldMonthly[1].category}}</h6>
               <h5>Sell {{listOfSoldMonthly[1].soldPerMonth}} per month</h5>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modalPlace">
+  <!-- MODAL -->
+  <!-- modal album 1 -->
+  <div class="modal fade" id="myModal1">
+    <div
+      class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down modal-dialog-scrollable"
+      style="width: 600px"
+    >
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Information</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+          ></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body row text-start">
+          <div class="img col-md-4 col-12">
+            <img
+              ng-src="{{listOfAlbum[0].image}}"
+              alt=""
+              width="1920px"
+              class="img-fluid"
+            />
+          </div>
+          <div class="describe col-md-8 col-12">
+            <p>
+              {{listOfAlbum[0].name}} <br />
+              <b>
+                {{listOfAlbum[0].category}} | {{listOfAlbum[0].type}} |
+                {{listOfAlbum[0].year}} <br />
+              </b>
+              {{listOfAlbum[0].describe}}
+            </p>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal album 2 -->
+  <div class="modal fade" id="myModal2">
+    <div
+      class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down modal-dialog-scrollable"
+      style="width: 600px"
+    >
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Information</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+          ></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body row text-start">
+          <div class="img col-md-4 col-12">
+            <img
+              ng-src="{{listOfAlbum[1].image}}"
+              alt=""
+              width="1920px"
+              class="img-fluid"
+            />
+          </div>
+          <div class="describe col-md-8 col-12">
+            <p>
+              {{listOfAlbum[1].name}} <br />
+              <b>
+                {{listOfAlbum[1].category}} | {{listOfAlbum[1].type}} |
+                {{listOfAlbum[1].year}} <br />
+              </b>
+              {{listOfAlbum[1].describe}}
+            </p>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal album 3 -->
+  <div class="modal fade" id="myModal3">
+    <div
+      class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down modal-dialog-scrollable"
+      style="width: 600px"
+    >
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Information</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+          ></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body row text-start">
+          <div class="img col-md-4 col-12">
+            <img
+              ng-src="{{listOfCategory[0].image}}"
+              alt=""
+              width="1920px"
+              class="img-fluid"
+            />
+          </div>
+          <div class="describe col-md-8 col-12">
+            <p>
+              {{listOfCategory[0].name}} <br />
+              <b>
+                {{listOfCategory[0].category}} | {{listOfCategory[0].type}} |
+                {{listOfCategory[0].year}} <br />
+              </b>
+              {{listOfCategory[0].describe}}
+            </p>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal album 4 -->
+  <div class="modal fade" id="myModal4">
+    <div
+      class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down modal-dialog-scrollable"
+      style="width: 600px"
+    >
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Information</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+          ></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body row text-start">
+          <div class="img col-md-4 col-12">
+            <img
+              ng-src="{{listOfCategory[1].image}}"
+              alt=""
+              width="1920px"
+              class="img-fluid"
+            />
+          </div>
+          <div class="describe col-md-8 col-12">
+            <p>
+              {{listOfCategory[1].name}} <br />
+              <b>
+                {{listOfCategory[1].category}} | {{listOfCategory[1].type}} |
+                {{listOfCategory[1].year}} <br />
+              </b>
+              {{listOfCategory[1].describe}}
+            </p>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal album 5 -->
+  <div class="modal fade" id="myModal5">
+    <div
+      class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down modal-dialog-scrollable"
+      style="width: 600px"
+    >
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Information</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+          ></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body row text-start">
+          <div class="img col-md-4 col-12">
+            <img
+              ng-src="{{listOfLiveshow[0].image}}"
+              alt=""
+              width="1920px"
+              class="img-fluid"
+            />
+          </div>
+          <div class="describe col-md-8 col-12">
+            <p>
+              {{listOfLiveshow[0].name}} <br />
+              <b>
+                {{listOfLiveshow[0].category}} | {{listOfLiveshow[0].type}} |
+                {{listOfLiveshow[0].year}} <br />
+              </b>
+              {{listOfLiveshow[0].describe}}
+            </p>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal album 6 -->
+  <div class="modal fade" id="myModal6">
+    <div
+      class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down modal-dialog-scrollable"
+      style="width: 600px"
+    >
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Information</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+          ></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body row text-start">
+          <div class="img col-md-4 col-12">
+            <img
+              ng-src="{{listOfLiveshow[1].image}}"
+              alt=""
+              width="1920px"
+              class="img-fluid"
+            />
+          </div>
+          <div class="describe col-md-8 col-12">
+            <p>
+              {{listOfLiveshow[1].name}} <br />
+              <b>
+                {{listOfLiveshow[1].category}} | {{listOfLiveshow[1].type}} |
+                {{listOfLiveshow[1].year}} <br />
+              </b>
+              {{listOfLiveshow[1].describe}}
+            </p>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal album 7 -->
+  <div class="modal fade" id="myModal7">
+    <div
+      class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down modal-dialog-scrollable"
+      style="width: 600px"
+    >
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Information</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+          ></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body row text-start">
+          <div class="img col-md-4 col-12">
+            <img
+              ng-src="{{listOfContest[0].image}}"
+              alt=""
+              width="1920px"
+              class="img-fluid"
+            />
+          </div>
+          <div class="describe col-md-8 col-12">
+            <p>
+              {{listOfContest[0].name}} <br />
+              <b>
+                {{listOfContest[0].category}} | {{listOfContest[0].type}} |
+                {{listOfContest[0].year}} <br />
+              </b>
+              {{listOfContest[0].describe}}
+            </p>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal album 8 -->
+  <div class="modal fade" id="myModal8">
+    <div
+      class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down modal-dialog-scrollable"
+      style="width: 600px"
+    >
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Information</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+          ></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body row text-start">
+          <div class="img col-md-4 col-12">
+            <img
+              ng-src="{{listOfContest[1].image}}"
+              alt=""
+              width="1920px"
+              class="img-fluid"
+            />
+          </div>
+          <div class="describe col-md-8 col-12">
+            <p>
+              {{listOfContest[1].name}} <br />
+              <b>
+                {{listOfContest[1].category}} | {{listOfContest[1].type}} |
+                {{listOfContest[1].year}} <br />
+              </b>
+              {{listOfContest[1].describe}}
+            </p>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal album 9 -->
+  <div class="modal fade" id="myModal9">
+    <div
+      class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down modal-dialog-scrollable"
+      style="width: 600px"
+    >
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Information</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+          ></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body row text-start">
+          <div class="img col-md-4 col-12">
+            <img
+              ng-src="{{listOfSoldMonthly[0].image}}"
+              alt=""
+              width="1920px"
+              class="img-fluid"
+            />
+          </div>
+          <div class="describe col-md-8 col-12">
+            <p>
+              {{listOfSoldMonthly[0].name}} <br />
+              <b>
+                {{listOfSoldMonthly[0].category}} |
+                {{listOfSoldMonthly[0].type}} | {{listOfSoldMonthly[0].year}}
+                <br />
+              </b>
+              {{listOfSoldMonthly[0].describe}}
+            </p>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal album 10 -->
+  <div class="modal fade" id="myModal10">
+    <div
+      class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down modal-dialog-scrollable"
+      style="width: 600px"
+    >
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Information</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+          ></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body row text-start">
+          <div class="img col-md-4 col-12">
+            <img
+              ng-src="{{listOfSoldMonthly[1].image}}"
+              alt=""
+              width="1920px"
+              class="img-fluid"
+            />
+          </div>
+          <div class="describe col-md-8 col-12">
+            <p>
+              {{listOfSoldMonthly[1].name}} <br />
+              <b>
+                {{listOfSoldMonthly[1].category}} |
+                {{listOfSoldMonthly[1].type}} | {{listOfSoldMonthly[1].year}}
+                <br />
+              </b>
+              {{listOfSoldMonthly[1].describe}}
+            </p>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
         </div>
       </div>
     </div>

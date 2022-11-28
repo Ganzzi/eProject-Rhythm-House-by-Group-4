@@ -145,7 +145,7 @@
       "category": "movie",
       "type": "Album",
       "year": 1997,
-      "describe": "",
+      "describe": "OK Computer is the third studio album by the English rock band Radiohead, released in Japan on 21 May 1997 and in the UK on 16 June 1997. Radiohead self-produced the album with Nigel Godrich, an arrangement they have used for their subsequent albums. Radiohead recorded most of OK Computer in their rehearsal space in Oxfordshire and the historic mansion of St Catherine's Court in Bath in 1996 and early 1997. The band distanced themselves from the guitar-centred, lyrically introspective style of their previous album, The Bends. OK Computer's abstract lyrics, densely layered sound and eclectic influences laid the groundwork for Radiohead's later, more experimental work.",
       "price": 100.0,
       "quantity": 1
     },
@@ -155,7 +155,7 @@
       "category": "movie",
       "type": "Album",
       "year": 1975,
-      "describe": "",
+      "describe": "Wish You Were Here is the ninth studio album by the English rock band Pink Floyd, released on 12 September 1975 through Harvest Records and Columbia Records. Based on material Pink Floyd composed while performing in Europe, Wish You Were Here was recorded over numerous sessions throughout 1975 at EMI Studios (now Abbey Road Studios) in London.The themes include alienation and criticism of the music business. The bulk of the album is taken up by 'Shine On You Crazy Diamond', a nine-part tribute to founding member Syd Barrett, who was sacked seven years earlier due to his deteriorating mental health. Barrett coincidentally visited during the album's production in 1975.",
       "price": 200.0,
       "quantity": 1
     }

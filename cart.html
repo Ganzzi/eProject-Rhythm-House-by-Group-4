@@ -41,7 +41,9 @@
           <td class="PQTR">
             <div class="btn-group">
               <button class="btn" ng-click="minusQuantity($index)">-</button>
-              <button class="btn">{{eachProduct.quantity}}</button>
+              <button class="btn text-center" style="width: 40px">
+                {{eachProduct.quantity}}
+              </button>
               <button class="btn" ng-click="plusQuantity($index)">+</button>
             </div>
           </td>

@@ -54,7 +54,34 @@
   h3 {
     font-family: "Times New Roman", Times, serif;
   }
+  .Modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 10vw;
+    top: 2vh;
+    width: 80vw; /* Full width */
+    min-height: 460px; /* Full height */
+    max-height: 700px;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(211, 209, 209);
+    border-radius: 10px;
+  }
+  h4.pi {
+    margin: 5px 0 10px 30px;
+    color: rgb(44, 6, 81);
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .Btn-close {
+    padding: 0 10px 0 10px;
+    border-radius: 5px;
+    background-color: red;
+    font-size: 1.2rem;
+    font-family: "Times New Roman", Times, serif;
+  }
 </style>
+
 <div class="container-fluid" ng-controller="product">
   <div class="content row">
     <div class="left-content col-sm-9 col-7 row">
@@ -67,10 +94,13 @@
             ng-src="{{eachProduct.image}}"
             alt=""
             class="card-img-top img-fluid"
+            data-bs-toggle="Modal"
+            data-bs-target="#myModal"
+            ng-click="showModal($index)"
           />
           <h3>{{eachProduct.name}}</h3>
           <h5>{{eachProduct.category}}</h5>
-          <p>${{eachProduct.price}},{{$index}}</p>
+          <p>${{eachProduct.price}}</p>
           <input
             type="button"
             value="Add to Cart"
@@ -82,36 +112,37 @@
     </div>
 
     <div class="right-content col-sm-3 col-5 mb-3">
-      <div class="row text-center">
-        <div class="search_1 col-11">
-          <input
-            type="text"
-            placeholder="search"
-            ng-model="search"
-            class="form-control"
-          />
-        </div>
-        <div class="col-1" ng-click="">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-search"
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <circle cx="10" cy="10" r="7"></circle>
-            <line x1="21" y1="21" x2="15" y2="15"></line>
-          </svg>
+      <div class="col-12">
+        <div class="row text-center">
+          <div class="search_1 col-11">
+            <input
+              type="text"
+              placeholder="search"
+              ng-model="search"
+              class="form-control"
+            />
+          </div>
+          <div class="col-1" ng-click="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-search"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <circle cx="10" cy="10" r="7"></circle>
+              <line x1="21" y1="21" x2="15" y2="15"></line>
+            </svg>
+          </div>
         </div>
       </div>
-
-      <div>
+      <div class="col-12">
         <div class="card-category text-start px-4 py-3">
           <h2>CATEGORY</h2>
           <input
@@ -152,7 +183,7 @@
         </div>
       </div>
 
-      <div>
+      <div class="col-12">
         <div class="card-types text-start px-4 py-3">
           <h2>TYPES</h2>
           <input
@@ -168,14 +199,14 @@
             id=""
             ng-model="radioTypes"
             ng-value="'CD'"
-          />CD <br />
-          <input
+          />CD <br /><input
             type="radio"
             name="radioTypes"
             id=""
             ng-model="radioTypes"
             ng-value="'DVD'"
           />DVD <br />
+
           <input
             type="radio"
             name="radioTypes"
@@ -199,8 +230,7 @@
           />Magazine <br />
         </div>
       </div>
-
-      <div class="">
+      <div class="col-12">
         <div class="card-year text-start px-4 py-3">
           <h2>YEAR</h2>
           <input
@@ -231,6 +261,62 @@
             ng-model="radioYear"
             ng-value="''"
           />123
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- manual Modal -->
+  <div class="Modal mt-md-5" ng-style="manualModal">
+    <div class="Modal-content">
+      <!-- Modal Header -->
+      <div class="Modal-header d-flex">
+        <h4 class="d-flex pi align-items-start">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-info-square mt-md-1 mr-3"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.25"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+            <polyline points="11 12 12 12 12 16 13 16"></polyline></svg
+          >Product Information
+        </h4>
+        <button
+          type="button"
+          class="Btn-close d-flex ms-auto mx-2 my-2 align-items-center"
+          ng-click="closeModal()"
+        >
+          Close
+        </button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="Modal-body row text-start">
+        <div class="img col-md-4 col-12 mx-md-3 mx-0">
+          <img
+            ng-src="{{productModal[0].image}}"
+            alt=""
+            width="1920px"
+            class="img-fluid"
+          />
+        </div>
+        <div class="describe col-md-7 col-12">
+          <p>
+            {{productModal[0].name}} <br />
+            <b>
+              {{productModal[0].category}} | {{productModal[0].type}} |
+              {{productModal[0].year}} <br />
+            </b>
+            {{productModal[0].describe}}
+          </p>
         </div>
       </div>
     </div>
