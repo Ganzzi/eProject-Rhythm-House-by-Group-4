@@ -21,6 +21,7 @@ app.run(function ($rootScope, $http) {
   $rootScope.listOfLiveshow = [];
   $rootScope.listOfContest = [];
   $rootScope.listOfSoldMonthly = [];
+  $rootScope.listOfCart = [];
 
   $http.get("data.json").then(
     function (response) {
@@ -36,12 +37,34 @@ app.run(function ($rootScope, $http) {
 });
 
 app.controller("index", function ($scope) {});
-app.controller("home", function ($scope) {});
-app.controller("product", function ($scope) {});
+
+app.controller("home", function ($scope) {
+  $scope.addAlbumToCart = function (index) {
+    $scope.listOfCart.push($scope.listOfAlbum[index]);
+    alert("add succesfully");
+  };
+
+  $scope.addCategoryToCart = function (index) {
+    $scope.listOfCart.push($scope.listOfCategory[index]);
+    alert("add succesfully");
+  };
+});
+
+app.controller("product", function ($scope) {
+  $scope.addProductToCart = function (index) {
+    if ($scope.listOfCart.indexOf($scope.listOfProduct[index]) == -1) {
+      $scope.listOfCart.push($scope.listOfProduct[index]);
+    } else {
+      $scope.listOfCart[$scope.listOfCart.indexOf($scope.listOfProduct[index])]
+        .quantity++;
+    }
+    alert("add succesfully");
+  };
+});
+
 app.controller("cart", function ($scope) {
-  $scope.listOfCart = [];
-  $scope.listOfCart.push($scope.listOfProduct[0]);
-  $scope.listOfCart.push($scope.listOfProduct[1]);
+  // $scope.listOfCart.push($scope.listOfProduct[0]);
+  // $scope.listOfCart.push($scope.listOfProduct[1]);
   $scope.shipFee = 200;
 
   cal();
@@ -81,8 +104,11 @@ app.controller("cart", function ($scope) {
     });
 
     if (index >= 0) {
+      $scope.listOfCart[index].quantity = 1;
       $scope.listOfCart.splice(index, 1);
     }
+
+    cal();
   };
 });
 

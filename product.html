@@ -70,8 +70,13 @@
           />
           <h3>{{eachProduct.name}}</h3>
           <h5>{{eachProduct.category}}</h5>
-          <p>${{eachProduct.price}}</p>
-          <input type="button" value="Add to Cart" class="btn btn-primary" />
+          <p>${{eachProduct.price}},{{$index}}</p>
+          <input
+            type="button"
+            value="Add to Cart"
+            ng-click="addProductToCart($index)"
+            class="btn btn-primary"
+          />
         </div>
       </div>
     </div>

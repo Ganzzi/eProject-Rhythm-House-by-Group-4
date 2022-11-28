@@ -131,7 +131,12 @@
             <h6>{{listOfAlbum[0].category}}</h6>
             <br />
             <h5>${{listOfAlbum[0].price}}</h5>
-            <input type="button" value="Add to cart" class="btn btn-primary" />
+            <input
+              type="button"
+              value="Add to cart"
+              ng-click="addAlbumToCart(0)"
+              class="btn btn-primary"
+            />
           </div>
         </div>
         <div class="album2 col-6">
@@ -146,7 +151,12 @@
             <h6>{{listOfAlbum[1].category}}</h6>
             <br />
             <h5>${{listOfAlbum[1].price}}</h5>
-            <input type="button" value="Add to cart" class="btn btn-primary" />
+            <input
+              type="button"
+              value="Add to cart"
+              ng-click="addAlbumToCart(1)"
+              class="btn btn-primary"
+            />
           </div>
         </div>
       </div>
@@ -165,7 +175,12 @@
             <h6>{{listOfCategory[0].category}}</h6>
             <br />
             <h5>${{listOfCategory[0].price}}</h5>
-            <input type="button" value="Add to cart" class="btn btn-primary" />
+            <input
+              type="button"
+              value="Add to cart"
+              ng-click="addCategoryToCart(0)"
+              class="btn btn-primary"
+            />
           </div>
         </div>
         <div class="category2 col-6">
@@ -180,7 +195,12 @@
             <h6>{{listOfCategory[1].category}}</h6>
             <br />
             <h5>${{listOfCategory[1].price}}</h5>
-            <input type="button" value="Add to cart" class="btn btn-primary" />
+            <input
+              type="button"
+              value="Add to cart"
+              ng-click="addCategoryToCart(1)"
+              class="btn btn-primary"
+            />
           </div>
         </div>
       </div>
