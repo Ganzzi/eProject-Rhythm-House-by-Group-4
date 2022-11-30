@@ -142,6 +142,27 @@ app.controller("cart", function ($scope) {
 
 app.controller("membership", function ($scope) {});
 
+// CAI NAY LA MAU, TU LAM LAI
+// app.controller("logInSignUpPage", function ($scope) {
+//   var checkLogIn = false;
+//   $scope.SignIn = function(){
+//     localStorage.setItem("emailSignUp", $scope.emailSignUp);
+//   }
+
+//   $scope.LogIn = function () {
+//     var checkEmail = localStorage.getItem("emailSignUp")
+//     $scope.ngmodel == checkEmail ???
+//     checkLogIn = true;
+//     logInSuccessfully();
+//   }
+
+//   function logInSuccessfully() {
+//     if(checkLogIn==true){
+//       $scope.form = {display: "none"}
+//     }
+//   }
+// });
+
 // REVEAL
 window.addEventListener("scroll", revealOfBlogPage);
 window.addEventListener("scroll", revealOfHomePage);

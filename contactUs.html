@@ -138,6 +138,8 @@
             name="name"
             id="name"
             placeholder="Your name here"
+            required
+            pattern="\w{1}[\d\w\s]{1,20}"
             class="form-control"
           />
           <input
@@ -145,6 +147,7 @@
             name="email"
             id="email"
             placeholder="Your email here"
+            required
             class="form-control"
           />
           <input
@@ -152,6 +155,7 @@
             name="subject"
             id="subject"
             placeholder="Subject here"
+            required
             class="form-control"
           />
           <input
@@ -159,6 +163,8 @@
             name="phone"
             id="phone"
             placeholder="Your phone here"
+            required
+            pattern="\d{7,11}"
             class="form-control"
           />
           <input
@@ -166,6 +172,7 @@
             name="mes"
             id="mes"
             placeholder="Message"
+            required
             class="form-control"
           />
           <button type="submit" class="btn btn-danger mt-2">
