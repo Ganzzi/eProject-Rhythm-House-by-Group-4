@@ -2,10 +2,17 @@
   td.PQTR {
     vertical-align: middle;
   }
+  .cartContent {
+    background-image: linear-gradient(
+      45deg,
+      rgb(253, 158, 255),
+      rgb(155, 237, 255)
+    );
+  }
 </style>
 
-<div class="container-fluid" ng-controller="cart">
-  <h1 class="mx-5 mt-5">Shopping Cart</h1>
+<div class="container-fluid cartContent" ng-controller="cart">
+  <h1 class="mx-5 pt-5">Shopping Cart</h1>
   <div class="listCart text-center py-2">
     <table class="table">
       <thead>
@@ -21,7 +28,9 @@
         <tr ng-repeat="eachProduct in listOfCart">
           <td>
             <div class="product row">
-              <div class="productImage col-4 text-center">
+              <div
+                class="productImage align-items-center col-sm-4 col-12 text-center"
+              >
                 <img
                   ng-src="{{eachProduct.image}}"
                   alt=""
@@ -29,7 +38,9 @@
                   width="100px"
                 />
               </div>
-              <div class="productTitle col-4 text-start">
+              <div
+                class="productTitle col-sm-4 col-12 text-sm-start text-center"
+              >
                 <p>
                   {{eachProduct.name}} <br />{{eachProduct.category}}
                   <br />{{eachProduct.type}} <br />{{eachProduct.year}}
@@ -108,7 +119,7 @@
       </form>
     </div>
 
-    <div class="orderInfor col-md-6 mb-3">
+    <div class="orderInfor col-md-6 pb-3">
       <h2>Order Information</h2>
       <div class="tableOrder">
         <div class="row" ng-repeat="eachProduct in listOfCart">

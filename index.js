@@ -51,6 +51,25 @@ app.controller("home", function ($scope) {
 });
 
 app.controller("product", function ($scope) {
+  setYearStatus();
+
+  function setYearStatus() {
+    for (let i = 0; i < $scope.listOfProduct.length; i++) {
+      if ($scope.listOfProduct[i].year < 2000) {
+        $scope.listOfProduct[i].yearStatus = "before2000";
+      }
+      if (
+        $scope.listOfProduct[i].year >= 2000 &&
+        $scope.listOfProduct[i].year <= 2010
+      ) {
+        $scope.listOfProduct[i].yearStatus = "2000To2010";
+      }
+      if ($scope.listOfProduct[i].year > 2010) {
+        $scope.listOfProduct[i].yearStatus = "after2010";
+      }
+    }
+  }
+
   $scope.addProductToCart = function (index) {
     if ($scope.listOfCart.indexOf($scope.listOfProduct[index]) == -1) {
       $scope.listOfCart.push($scope.listOfProduct[index]);
@@ -65,7 +84,7 @@ app.controller("product", function ($scope) {
     $scope.productModal = [];
     $scope.productModal.push($scope.listOfProduct[index]);
     console.log($scope.productModal[0]);
-    $scope.manualModal = { display: "block" };
+    $scope.manualModal = { display: "flex" };
   };
 
   $scope.closeModal = function () {
@@ -74,8 +93,6 @@ app.controller("product", function ($scope) {
 });
 
 app.controller("cart", function ($scope) {
-  // $scope.listOfCart.push($scope.listOfProduct[0]);
-  // $scope.listOfCart.push($scope.listOfProduct[1]);
   $scope.shipFee = 200;
 
   cal();
@@ -124,3 +141,90 @@ app.controller("cart", function ($scope) {
 });
 
 app.controller("membership", function ($scope) {});
+
+// REVEAL
+window.addEventListener("scroll", revealOfBlogPage);
+window.addEventListener("scroll", revealOfHomePage);
+window.addEventListener("scroll", revealOfAboutUsPage);
+window.addEventListener("scroll", revealOfMembershipPage);
+window.addEventListener("scroll", revealOfContactUsPage);
+
+function revealOfBlogPage() {
+  var reveals = document.querySelectorAll(".revealOfBlogPage");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var revealTop = reveals[i].getBoundingClientRect().top;
+    var revealPoint = 50;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+function revealOfHomePage() {
+  var reveals = document.querySelectorAll(".revealOfHomePage");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var revealTop = reveals[i].getBoundingClientRect().top;
+    var revealPoint = 300;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+function revealOfAboutUsPage() {
+  var reveals = document.querySelectorAll(".revealOfAboutUsPage");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var revealTop = reveals[i].getBoundingClientRect().top;
+    var revealPoint = 200;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+function revealOfMembershipPage() {
+  var reveals = document.querySelectorAll(".revealOfMembershipPage");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var revealTop = reveals[i].getBoundingClientRect().top;
+    var revealPoint = 200;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+function revealOfContactUsPage() {
+  var reveals = document.querySelectorAll(".revealOfContactUsPage");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var revealTop = reveals[i].getBoundingClientRect().top;
+    var revealPoint = 100;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
