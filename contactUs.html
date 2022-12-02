@@ -15,11 +15,11 @@
     padding: 20px 0 0 0;
   }
   .content1 {
-    padding: 100px 0 100px 0;
+    padding: 20vh 0 10vh 0;
   }
   .threeContact {
     justify-content: center;
-    margin: 20px 0 150px 0;
+    margin: 50px 0 200px 0;
     min-height: 200px;
     border-bottom: solid 2px white;
     border-top: solid 2px white;
@@ -130,7 +130,7 @@
         </iframe>
       </div>
 
-      <div class="form col-md-6 col-12 text-md-start text-center mt-md-0 mt-3">
+      <div class="form col-md-6 col-12 text-md-start text-center mt-md-0 mt-5">
         <form action="" class="form" ng-submit="">
           <legend>GET IN TOUCH</legend>
           <input
@@ -139,7 +139,7 @@
             id="name"
             placeholder="Your name here"
             required
-            pattern="\w{1}[\d\w\s]{1,20}"
+            pattern="[A-Za-z1-9]{2,10}[A-Za-z1-9 ]{2,10}"
             class="form-control"
           />
           <input
@@ -149,14 +149,7 @@
             placeholder="Your email here"
             required
             class="form-control"
-          />
-          <input
-            type="text"
-            name="subject"
-            id="subject"
-            placeholder="Subject here"
-            required
-            class="form-control"
+            pattern="^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
           />
           <input
             type="text"
@@ -173,6 +166,13 @@
             id="mes"
             placeholder="Message"
             required
+            class="form-control"
+          />
+          <input
+            type="text"
+            name="additionalDetail"
+            id="additionalDetail"
+            placeholder="Additional details"
             class="form-control"
           />
           <button type="submit" class="btn btn-danger mt-2">

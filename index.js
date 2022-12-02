@@ -1,5 +1,7 @@
 let app = angular.module("myApp", ["ngRoute"]);
 
+localStorage.setItem("logInStatus", "false");
+
 app.config(function ($routeProvider) {
   $routeProvider
     .when("", { templateUrl: "home.html" })
@@ -52,6 +54,10 @@ app.controller("home", function ($scope) {
 
 app.controller("product", function ($scope) {
   setYearStatus();
+
+  for (let i = 0; i < $scope.listOfProduct.length; i++) {
+    $scope.listOfProduct[i].index = i;
+  }
 
   function setYearStatus() {
     for (let i = 0; i < $scope.listOfProduct.length; i++) {
@@ -138,30 +144,66 @@ app.controller("cart", function ($scope) {
 
     cal();
   };
+
+  $scope.orderSuccess = function () {
+    if ($scope.listOfCart.length == 0) {
+      alert("Nothing in your cart!");
+    } else {
+      alert("Your successful order!!");
+    }
+    $scope.listOfCart = [];
+  };
 });
 
 app.controller("membership", function ($scope) {});
 
-// CAI NAY LA MAU, TU LAM LAI
-// app.controller("logInSignUpPage", function ($scope) {
-//   var checkLogIn = false;
-//   $scope.SignIn = function(){
-//     localStorage.setItem("emailSignUp", $scope.emailSignUp);
-//   }
+app.controller("logInSignUpPage", function ($scope) {
+  var checkLogIn = false;
 
-//   $scope.LogIn = function () {
-//     var checkEmail = localStorage.getItem("emailSignUp")
-//     $scope.ngmodel == checkEmail ???
-//     checkLogIn = true;
-//     logInSuccessfully();
-//   }
+  checkLogInFunction();
 
-//   function logInSuccessfully() {
-//     if(checkLogIn==true){
-//       $scope.form = {display: "none"}
-//     }
-//   }
-// });
+  $scope.SignUp = function () {
+    localStorage.setItem("emailSignUp", $scope.emailSignUp);
+    localStorage.setItem("username", $scope.username);
+    localStorage.setItem("passSignUp", $scope.passSignUp);
+    alert("Sign Up successfully!");
+    $scope.emailSignUp = "";
+    $scope.username = "";
+    $scope.passSignUp = "";
+  };
+
+  $scope.LogIn = function () {
+    var checkEmail = localStorage.getItem("emailSignUp");
+    var checkPass = localStorage.getItem("passSignUp");
+
+    if ($scope.email == checkEmail && $scope.pass == checkPass) {
+      checkLogIn = true;
+    }
+    logInSuccessfully();
+  };
+
+  function logInSuccessfully() {
+    if (checkLogIn == true) {
+      alert("Log In successfully!");
+      localStorage.setItem("logInStatus", "true");
+    } else {
+      alert("Wrong Email or Password!");
+    }
+    checkLogInFunction();
+  }
+  function checkLogInFunction() {
+    var logInStatuss = localStorage.getItem("logInStatus");
+
+    if (logInStatuss == "true") {
+      $scope.userName = localStorage.getItem("username");
+      $scope.welcome = { display: "flex" };
+      $scope.form = { display: "none" };
+    } else {
+      $scope.welcome = { display: "none" };
+      $scope.form = { display: "flex" };
+    }
+  }
+});
 
 // REVEAL
 window.addEventListener("scroll", revealOfBlogPage);
@@ -240,7 +282,7 @@ function revealOfContactUsPage() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var revealTop = reveals[i].getBoundingClientRect().top;
-    var revealPoint = 100;
+    var revealPoint = 50;
 
     if (revealTop < windowHeight - revealPoint) {
       reveals[i].classList.add("active");

@@ -146,10 +146,12 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 450;
     margin: 0 0 20px 0;
+    transition: 0.2s;
   }
   .Btn-addToCart:hover {
     box-shadow: 0 0 5px rgb(255, 0, 0);
     font-weight: 500;
+    transition: 0.2s;
   }
 </style>
 
@@ -167,9 +169,9 @@
             class="card-img-top img-fluid"
             data-bs-toggle="Modal"
             data-bs-target="#myModal"
-            ng-click="showModal($index)"
+            ng-click="showModal(eachProduct.index)"
           />
-          <h3>{{eachProduct.name}}</h3>
+          <h3>{{eachProduct.name}}{{$index}}</h3>
           <h5>{{eachProduct.category}} - {{eachProduct.type}}</h5>
           <p>${{eachProduct.price}}</p>
           <input

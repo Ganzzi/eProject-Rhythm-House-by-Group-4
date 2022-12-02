@@ -94,6 +94,54 @@
       "describe": "2013 can be considered as the year of the big victory of the YG family and also the year of the big award for the leader of Big Bang.At the recent MAMA award ceremony, GD won four important awards: Artist of the year, Best Male Artist, and Best solo dance performance. (Best Dance Performance-Male solo), Best MV (Nissan Juke Best Music Video).Working solo since 2009 and continuously producing excellent products, in 2013, GD continued to release the album Coup d'etat. Before being released, this album proved its huge attraction when bringing YG 300,000 orders in Korea alone.Included in this album are 14 songs with 4 title songs: Who you, Black, Crooked and Niliria. MV Crooked alone reached 4 million views within 10 days. Immediately after being released, the songs on the album also continuously remained in the top 10 most listened songs on online music charts. Coup d'etat also helped G-Dragon become the highest-ranking Asian Artist on the iTunes Global Artist Chart.",
       "price": 200.0,
       "quantity": 1
+    },
+
+    {
+      "image": "image/dacnhantam.jpg",
+      "name": " Dac Nhan Tam ",
+      "product-type": "Product",
+      "type": "Book",
+      "category": "movie",
+      "year": "2016",
+      "describe": "Dac Nhan Tam is the most famous, best-selling, and most influential book of all time. This book is continuously topping the best-selling book list (voted by The New York Times for 10 years in a row. The work is considered the first and best book, having a life-changing influence. of millions of people around the world.Dac Nhan Tam is the art of winning people's hearts, is to make everyone love you.Achieving human heart and talent in each of us.Dac Nhan Tam in that sense needs to be achieved. Acquired by self-understanding, being honest with yourself, understanding and caring for those around you to see and unleash their hidden potentials, helping them to grow to new heights. It is the highest art about people and the deepest meaning drawn from Dale Carnegie's golden principles. Since 'Winning the heart' to readers, it has made readers realize that they have can moderate the relationships inside and outside of work, and in fact, the two relationships are never separate. Best quote in the book It is this: “It is a fact that everyone you meet feels they are better than you in some way, and the straight way to their hearts is for them to realize that you recognize your importance. theirs, and that credit is sincere.”",
+      "price": 100.0,
+      "quantity": 1
+    },
+
+    {
+      "image": "image/cachnghidethanhcong.jpg",
+      "name": " Cach Nghi De Thanh Cong ",
+      "product-type": "Product",
+      "type": "Book",
+      "category": "movie",
+      "year": "2016",
+      "describe": "How to Think for Success is the first book to lay out the philosophy of success - a complete and comprehensive philosophy of personal success, and give you the method to create a rough and detailed plan. To achieve that success.Written from countless true stories of great people like Edison - a brilliant inventor whose training time in school was only... only 3 months, like Henry Ford - who is considered uneducated but has become a tycoon in the car industry with a huge fortune..., the work has a great persuasion and movement,. Napoleon Hill has spent almost all of his time and energy over the course of nearly thirty years interviewing over 500 of the most famous and successful people in various fields, along with thousands of other entrepreneurs - even the most unsuccessful. and successful people. With more than 60 million copies sold in the 70 years since its inception, the conclusions of Napoleon Hill's success have never been outdated, on the contrary, time is the proof. alive for the correctness of the secrets he shares. The best quote from this book is: “The breakthroughs you need in life are in your imagination. Imagination is the factory in your head that can turn the energy of thought into achievement and wealth.””",
+      "price": 100.0,
+      "quantity": 1
+    },
+
+    {
+      "image": "image/elle.jpg",
+      "name": " Elle ",
+      "product-type": "Product",
+      "type": "Magazine",
+      "category": "movie",
+      "year": "1945",
+      "describe": "Elle is a magazine of French origin, focusing on fashion, beauty, health and entertainment. It was founded by Pierre Lazareff and his wife Helene Gordon in 1945. Currently, it is one of the best-selling fashion magazines in the world.””",
+      "price": 100.0,
+      "quantity": 1
+    },
+
+    {
+      "image": "image/glamour.jpg",
+      "name": " Glamour ",
+      "product-type": "Product",
+      "type": "Magazine",
+      "category": "movie",
+      "year": "1939",
+      "describe": "Glamor is a women's magazine first published by Conde Nast Publications in April 1939 in the United States. Local editions are now published in many countries including UK, France, Italy, Germany, Spain, Russia, Greece, Poland, South Africa, Brazil, Hungary, Romania, Bulgaria, Netherlands Lan and Mexico.””",
+      "price": 100.0,
+      "quantity": 1
     }
   ],
   "liveshow": [
