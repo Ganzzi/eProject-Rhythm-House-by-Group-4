@@ -21,7 +21,7 @@ eProject documentation at https://github.com/imduyan/eProject/tree/main/Document
 
 ============================
 
-eProject published at 
+eProject published at https://imduyan.github.io/eProject/index.html
 
 ============================
 
