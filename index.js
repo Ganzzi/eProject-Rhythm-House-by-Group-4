@@ -38,7 +38,11 @@ app.run(function ($rootScope, $http) {
   );
 });
 
-app.controller("index", function ($scope) {});
+app.controller("index", function ($scope) {
+  $scope.hideHomePage = function () {
+    $scope.originalHome = { display: "none" };
+  };
+});
 
 app.controller("home", function ($scope) {
   $scope.addAlbumToCart = function (index) {

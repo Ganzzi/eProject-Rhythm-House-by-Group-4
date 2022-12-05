@@ -20,7 +20,6 @@
 
       a.nav-link {
         color: rgb(101, 101, 101);
-        background-color: blue;
       }
 
       a.nav-link:hover {
@@ -48,7 +47,11 @@
           class="navbar navbar-expand-md bg-light pt-20 justify-content-md-center justify-content-start"
         >
           <div class="container">
-            <a href="#!home" class="navbar-brand d-md-none d-block">
+            <a
+              href="#!home"
+              class="navbar-brand d-md-none d-block"
+              ng-click="hideHomePage()"
+            >
               <img
                 src="image/logo.jpg"
                 alt="logo"
@@ -69,7 +72,10 @@
               id="mynavbar"
               class="collapse navbar-collapse justify-content-md-center"
             >
-              <ul class="navbar-nav align-items-end align-items-md-center">
+              <ul
+                class="navbar-nav align-items-end align-items-md-center"
+                ng-click="hideHomePage()"
+              >
                 <li class="nav-item">
                   <a href="#!home" class="navbar-brand d-md-block d-none">
                     <img
@@ -158,6 +164,11 @@
 
       <!-- PAGE CONTENT -->
       <div class="section" ng-view style="min-height: 60vh"></div>
+      <div
+        class="section"
+        ng-include="'home.html'"
+        ng-style="originalHome"
+      ></div>
       <!-- END PAGE CONTENT -->
 
       <!-- FOOTER -->
