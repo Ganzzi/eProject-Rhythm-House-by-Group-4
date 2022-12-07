@@ -23,8 +23,6 @@ function backToTop() {
 //Initial angular app
 let app = angular.module("myApp", ["ngRoute"]);
 
-localStorage.setItem("logInStatus", "false");
-
 app.config(function ($routeProvider) {
   $routeProvider
     .when("/home", { templateUrl: "home.html" })
@@ -60,11 +58,7 @@ app.run(function ($rootScope, $http) {
   );
 });
 
-app.controller("index", function ($scope) {
-  $scope.hideHomePage = function () {
-    $scope.originalHome = { display: "none" };
-  };
-});
+app.controller("index", function ($scope) {});
 
 app.controller("home", function ($scope) {
   $scope.addAlbumToCart = function (index) {
@@ -199,6 +193,7 @@ app.controller("logInSignUpPage", function ($scope) {
   };
 
   $scope.LogIn = function () {
+    localStorage.setItem("logInStatus", "false");
     var checkEmail = localStorage.getItem("emailSignUp");
     var checkPass = localStorage.getItem("passSignUp");
 
