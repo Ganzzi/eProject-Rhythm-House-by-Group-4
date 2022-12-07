@@ -20,7 +20,7 @@ eProject documentation at https://github.com/imduyan/eProject/tree/main/Document
 
 ---------------------------------
 
-eProject published at https://imduyan.github.io/eProject/index.html
+eProject published at https://imduyan.github.io/eProject/index.html#!/home
 
 ---------------------------------
 
