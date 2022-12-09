@@ -16,11 +16,11 @@ Project title: Rhythm House
 
 ---------------------------------
 
-eProject documentation at https://github.com/imduyan/eProject/tree/main/Documentation
+eProject documentation at 
 
 ---------------------------------
 
-eProject published at https://imduyan.github.io/eProject/index.html#!/home
+eProject published at 
 
 ---------------------------------
 
