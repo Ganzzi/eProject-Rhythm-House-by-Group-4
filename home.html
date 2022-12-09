@@ -1,3 +1,4 @@
+<!-- STYLE OF HOME PAGE -->
 <style>
   .row,
   input[type="button"],
@@ -98,11 +99,13 @@
     font-weight: 500;
   }
 </style>
+<!-- STYLE OF HOME PAGE -->
+
+<!-- HOME PAGE CONTENT -->
 <div class="container-fluid homeContent" ng-controller="home">
+  <!-- CAROUSEL -->
   <div class="carousel row d-sm-flex d-none">
-    <!-- Carousel -->
     <div id="demo" class="carousel slide col-md-10" data-bs-ride="carousel">
-      <!-- The slideshow/carousel -->
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
@@ -149,9 +152,13 @@
       </button>
     </div>
   </div>
+  <!-- END CAROUSEL -->
 
+  <!-- ALBUM, CONTEST, LIVESHOW, CATEGORY AND SOLD MONTHLY -->
   <div class="row">
+    <!-- ALBUM AND CATEGORY -->
     <div class="left-content col-12 col-xl-8 px-3">
+      <!-- ALBUM -->
       <div
         class="album revealOfHomePage alca row py-3"
         style="margin-top: 80px"
@@ -206,7 +213,9 @@
           </div>
         </div>
       </div>
+      <!-- END ALBUM -->
 
+      <!-- CATEFORY -->
       <div
         class="category revealOfHomePage alca row py-3"
         style="margin: 250px 0 0 0"
@@ -261,9 +270,13 @@
           </div>
         </div>
       </div>
+      <!-- END CATEGORY -->
     </div>
+    <!-- END ALBUM AND CATEGORY -->
 
+    <!-- LIVE SHOW, CONTEST AND SOLD MONTHLY -->
     <div class="right-content col-12 col-xl-4 px-3">
+      <!-- LIVE SHOW -->
       <div class="liveShows revealOfHomePage lsctsm" style="margin-top: 250px">
         <div class="liveshow row py-3">
           <h1 class="title">Live Shows</h1>
@@ -311,6 +324,9 @@
           </div>
         </div>
       </div>
+      <!-- LIVE SHOW -->
+
+      <!-- CONTEST -->
       <div class="contest my-5">
         <div
           class="contest revealOfHomePage lsctsm row py-3"
@@ -361,6 +377,9 @@
           </div>
         </div>
       </div>
+      <!-- END CONTEST -->
+
+      <!-- SOLD MONTHLY -->
       <div
         class="soldMonthly revealOfHomePage lsctsm"
         style="margin: 200px 0 300px 0"
@@ -415,9 +434,15 @@
           </div>
         </div>
       </div>
+      <!-- END SOLD MONTHLY -->
     </div>
+    <!-- END LIVE SHOW, CONTEST AND SOLD MONTHLY -->
   </div>
+  <!-- END ALBUM, CONTEST, LIVESHOW, CATEGORY AND SOLD MONTHLY -->
 </div>
+<!-- END HOME PAGE CONTENT -->
+
+<!-- MODAL PLACE -->
 <div class="modalPlace">
   <!-- MODAL -->
   <!-- modal album 1 -->
@@ -912,3 +937,4 @@
     </div>
   </div>
 </div>
+<!-- END MODAL PLACE -->

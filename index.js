@@ -1,4 +1,4 @@
-//Button Scroll Up to top
+// SCROLL UP BUTTON
 let mybutton = document.getElementById("btn-back-to-top");
 
 window.onscroll = function () {
@@ -19,10 +19,12 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+// END SCROLL UP BUTTON
 
-//Initial angular app
+// Initial angular app
 let app = angular.module("myApp", ["ngRoute"]);
 
+// NG-ROUTE
 app.config(function ($routeProvider) {
   $routeProvider
     .when("/home", { templateUrl: "home.html" })
@@ -34,6 +36,7 @@ app.config(function ($routeProvider) {
     .when("/cart", { templateUrl: "cart.html" })
     .when("/logInSignUp", { templateUrl: "logInSignUp.html" });
 });
+// END NG-ROUTE
 
 // initialize list of product, album, category, liveshow, contest and sold monthly from route
 app.run(function ($rootScope, $http) {
@@ -58,27 +61,36 @@ app.run(function ($rootScope, $http) {
   );
 });
 
+// CONTROLLER
+
+// index's controller
 app.controller("index", function ($scope) {});
 
+// home's controller
 app.controller("home", function ($scope) {
+  // function add album to cart
   $scope.addAlbumToCart = function (index) {
     $scope.listOfCart.push($scope.listOfAlbum[index]);
     alert("Add successfully!");
   };
 
+  // function add category to cart
   $scope.addCategoryToCart = function (index) {
     $scope.listOfCart.push($scope.listOfCategory[index]);
     alert("Add successfully!");
   };
 });
 
+// product's controller
 app.controller("product", function ($scope) {
   setYearStatus();
 
+  // loop to initial index of each product
   for (let i = 0; i < $scope.listOfProduct.length; i++) {
     $scope.listOfProduct[i].index = i;
   }
 
+  // function set year status (3 status) according to product's year
   function setYearStatus() {
     for (let i = 0; i < $scope.listOfProduct.length; i++) {
       if ($scope.listOfProduct[i].year < 2000) {
@@ -96,6 +108,7 @@ app.controller("product", function ($scope) {
     }
   }
 
+  // function add product to cart
   $scope.addProductToCart = function (index) {
     if ($scope.listOfCart.indexOf($scope.listOfProduct[index]) == -1) {
       $scope.listOfCart.push($scope.listOfProduct[index]);
@@ -106,6 +119,7 @@ app.controller("product", function ($scope) {
     alert("Add successfully!");
   };
 
+  // function show modal contain information of product
   $scope.showModal = function (index) {
     $scope.productModal = [];
     $scope.productModal.push($scope.listOfProduct[index]);
@@ -113,16 +127,19 @@ app.controller("product", function ($scope) {
     $scope.manualModal = { display: "flex" };
   };
 
+  // function close modal
   $scope.closeModal = function () {
     $scope.manualModal = { display: "none" };
   };
 });
 
+// cart's controller
 app.controller("cart", function ($scope) {
   $scope.shipFee = 200;
 
   cal();
 
+  // function calculate cart total and vat
   function cal() {
     $scope.cartTotal = 0;
     $scope.vat = 0;
@@ -135,11 +152,13 @@ app.controller("cart", function ($scope) {
     $scope.vat += $scope.cartTotal * 0.1;
   }
 
+  // function plus quantity of each product
   $scope.plusQuantity = function (index) {
     $scope.listOfCart[index].quantity++;
     cal();
   };
 
+  // function minus quantity of each product
   $scope.minusQuantity = function (index) {
     $scope.listOfCart[index].quantity--;
     if ($scope.listOfCart[index].quantity < 0) {
@@ -148,6 +167,7 @@ app.controller("cart", function ($scope) {
     cal();
   };
 
+  // function delete product from list of product in cart
   $scope.delete = function (nameToDelete) {
     let index = -1;
 
@@ -165,6 +185,7 @@ app.controller("cart", function ($scope) {
     cal();
   };
 
+  // function when user click order button
   $scope.orderSuccess = function () {
     if ($scope.listOfCart.length == 0) {
       alert("Nothing in your cart!");
@@ -175,13 +196,14 @@ app.controller("cart", function ($scope) {
   };
 });
 
+// membership's controller
 app.controller("membership", function ($scope) {});
 
+// logInSignUpPage's controller
 app.controller("logInSignUpPage", function ($scope) {
-  var checkLogIn = false;
-
   checkLogInFunction();
 
+  // function sign up when click sign up button
   $scope.SignUp = function () {
     localStorage.setItem("emailSignUp", $scope.emailSignUp);
     localStorage.setItem("username", $scope.username);
@@ -192,35 +214,36 @@ app.controller("logInSignUpPage", function ($scope) {
     $scope.passSignUp = "";
   };
 
+  // function log in when click log in button
   $scope.LogIn = function () {
-    localStorage.setItem("logInStatus", "false");
+    //get email and password from local storage
     var checkEmail = localStorage.getItem("emailSignUp");
     var checkPass = localStorage.getItem("passSignUp");
 
+    // check email and password
     if ($scope.email == checkEmail && $scope.pass == checkPass) {
-      checkLogIn = true;
+      localStorage.setItem("logInStatus", "true");
+      alert("Log In successfully!");
+    } else {
+      localStorage.setItem("logInStatus", "false");
+      alert("Wrong Email or Password!");
     }
-    logInSuccessfully();
+    checkLogInFunction();
   };
 
+  // function log out when click log out button
   $scope.LogOut = () => {
     localStorage.setItem("logInStatus", "false");
     $scope.welcome = { display: "none" };
     $scope.form = { display: "flex" };
   };
 
-  function logInSuccessfully() {
-    if (checkLogIn == true) {
-      alert("Log In successfully!");
-      localStorage.setItem("logInStatus", "true");
-    } else {
-      alert("Wrong Email or Password!");
-    }
-    checkLogInFunction();
-  }
+  // function to check login status true or false
   function checkLogInFunction() {
+    // get login status
     var logInStatuss = localStorage.getItem("logInStatus");
 
+    // if true: display welcome, ortherwise login form
     if (logInStatuss == "true") {
       $scope.userName = localStorage.getItem("username");
       $scope.welcome = { display: "flex" };
@@ -232,23 +255,26 @@ app.controller("logInSignUpPage", function ($scope) {
   }
 });
 
-// REVEAL
-checkHomePageMobile();
+// END CONTROLLER
 
+// REVEAL
+
+// Event Listener
+window.addEventListener("load", checkHomePageMobile); // display when load home page
 window.addEventListener("scroll", revealOfBlogPage);
-window.addEventListener("load", checkHomePageMobile);
 window.addEventListener("scroll", revealOfHomePage);
 window.addEventListener("scroll", revealOfAboutUsPage);
 window.addEventListener("scroll", revealOfMembershipPage);
 window.addEventListener("scroll", revealOfContactUsPage);
 
-function revealOfBlogPage() {
-  var reveals = document.querySelectorAll(".revealOfBlogPage");
+// FUNCTION DECLARATION
+function checkHomePageMobile() {
+  var reveals = document.querySelectorAll(".revealOfHomePage");
 
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var revealTop = reveals[i].getBoundingClientRect().top;
-    var revealPoint = 50;
+    var revealPoint = 300;
 
     if (revealTop < windowHeight - revealPoint) {
       reveals[i].classList.add("active");
@@ -258,13 +284,13 @@ function revealOfBlogPage() {
   }
 }
 
-function checkHomePageMobile() {
-  var reveals = document.querySelectorAll(".revealOfHomePage");
+function revealOfBlogPage() {
+  var reveals = document.querySelectorAll(".revealOfBlogPage");
 
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var revealTop = reveals[i].getBoundingClientRect().top;
-    var revealPoint = 300;
+    var revealPoint = 50;
 
     if (revealTop < windowHeight - revealPoint) {
       reveals[i].classList.add("active");
@@ -337,3 +363,6 @@ function revealOfContactUsPage() {
     }
   }
 }
+// END FUNCTION DECLARATION
+
+// END REVEAL

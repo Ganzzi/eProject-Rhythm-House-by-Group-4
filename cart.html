@@ -1,3 +1,4 @@
+<!-- STYLE OF CART PAGE -->
 <style>
   h2 {
     font-family: "Kaushan Script", cursive;
@@ -29,9 +30,13 @@
     }
   }
 </style>
+<!-- END STYLE OF CART PAGE -->
 
+<!-- CART PAGE CONTENT -->
 <div class="container-fluid cartContent" ng-controller="cart">
   <h1 class="mx-5 pt-5">Shopping Cart</h1>
+
+  <!-- LIST OF PRODUCT IN CART -->
   <div class="listCart text-center py-2">
     <table class="table">
       <thead>
@@ -104,8 +109,11 @@
       </tbody>
     </table>
   </div>
+  <!-- END LIST OF PRODUCT IN CART -->
 
+  <!-- ORDER INFORMATION -->
   <div class="orderFormInfor row">
+    <!-- USER'S INFOMATION -->
     <div class="formInfor col-md-6" style="margin: 10px 0 20px 0">
       <form action="" class="form" id="formInfor" ng-submit="orderSuccess()">
         <h2 for="" class="">Your Information</h2>
@@ -138,7 +146,9 @@
         />
       </form>
     </div>
+    <!-- END USER'S INFOMATION -->
 
+    <!-- ORDER DETAIL -->
     <div class="orderInfor col-md-6 pb-3" style="margin: 10px 0 0 0">
       <h2>Order Information</h2>
       <div class="tableOrder">
@@ -195,5 +205,8 @@
         />
       </div>
     </div>
+    <!-- END ORDER DETAIL -->
   </div>
+  <!-- END ORDER INFOMATION -->
 </div>
+<!-- END CART PAGE CONTENT -->
