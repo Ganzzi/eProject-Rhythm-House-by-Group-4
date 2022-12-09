@@ -2,9 +2,6 @@
   h2 {
     font-family: "Kaushan Script", cursive;
   }
-  td > p {
-    font-size: 3vw;
-  }
   input {
     font-family: "Lobster", cursive;
   }
@@ -23,6 +20,14 @@
   .icon-tabler-trash::after {
     color: red;
   }
+  .pp {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 567px) {
+    .pp {
+      font-size: 8px;
+    }
+  }
 </style>
 
 <div class="container-fluid cartContent" ng-controller="cart">
@@ -31,11 +36,11 @@
     <table class="table">
       <thead>
         <tr>
-          <td><p>PRODUCT</p></td>
-          <td><p>PRICE</p></td>
-          <td><p>QUANTITY</p></td>
-          <td><p>TOTAL</p></td>
-          <td><p>REMOVE</p></td>
+          <td><p class="pp">PRODUCT</p></td>
+          <td><p class="pp">PRICE</p></td>
+          <td><p class="pp">QUANTITY</p></td>
+          <td><p class="pp">TOTAL</p></td>
+          <td><p class="pp">REMOVE</p></td>
         </tr>
       </thead>
       <tbody>
