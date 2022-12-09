@@ -63,6 +63,17 @@
     height: 60vh;
     align-items: center;
   }
+  .Btn-logOut {
+    border: none;
+    background-color: rgb(255, 101, 101);
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+  }
+  .Btn-logOut:hover {
+    background-color: red;
+  }
 </style>
 <div class="container-fluid logInSignUpContent" ng-controller="logInSignUpPage">
   <div class="formlas row" ng-style="form">
@@ -138,7 +149,7 @@
   >
     <div class="col-12 welcomeText">
       <h1>Welcome {{userName}} !</h1>
-      <button>Log Out</button>
+      <button ng-click="LogOut()" class="Btn-logOut">Log Out</button>
     </div>
   </div>
 </div>

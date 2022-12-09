@@ -203,6 +203,12 @@ app.controller("logInSignUpPage", function ($scope) {
     logInSuccessfully();
   };
 
+  $scope.LogOut = () => {
+    localStorage.setItem("logInStatus", "false");
+    $scope.welcome = { display: "none" };
+    $scope.form = { display: "flex" };
+  };
+
   function logInSuccessfully() {
     if (checkLogIn == true) {
       alert("Log In successfully!");
@@ -227,7 +233,10 @@ app.controller("logInSignUpPage", function ($scope) {
 });
 
 // REVEAL
+checkHomePageMobile();
+
 window.addEventListener("scroll", revealOfBlogPage);
+window.addEventListener("load", checkHomePageMobile);
 window.addEventListener("scroll", revealOfHomePage);
 window.addEventListener("scroll", revealOfAboutUsPage);
 window.addEventListener("scroll", revealOfMembershipPage);
@@ -240,6 +249,22 @@ function revealOfBlogPage() {
     var windowHeight = window.innerHeight;
     var revealTop = reveals[i].getBoundingClientRect().top;
     var revealPoint = 50;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+function checkHomePageMobile() {
+  var reveals = document.querySelectorAll(".revealOfHomePage");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var revealTop = reveals[i].getBoundingClientRect().top;
+    var revealPoint = 300;
 
     if (revealTop < windowHeight - revealPoint) {
       reveals[i].classList.add("active");
@@ -287,7 +312,7 @@ function revealOfMembershipPage() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var revealTop = reveals[i].getBoundingClientRect().top;
-    var revealPoint = 200;
+    var revealPoint = 100;
 
     if (revealTop < windowHeight - revealPoint) {
       reveals[i].classList.add("active");
