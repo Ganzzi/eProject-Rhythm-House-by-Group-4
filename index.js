@@ -21,8 +21,12 @@ function backToTop() {
 }
 // END SCROLL UP BUTTON
 
+
+
 // Initial angular app
 let app = angular.module("myApp", ["ngRoute"]);
+
+
 
 // NG-ROUTE
 app.config(function ($routeProvider) {
@@ -37,6 +41,8 @@ app.config(function ($routeProvider) {
     .when("/logInSignUp", { templateUrl: "logInSignUp.html" });
 });
 // END NG-ROUTE
+
+
 
 // initialize list of product, album, category, liveshow, contest and sold monthly from route
 app.run(function ($rootScope, $http) {
@@ -61,8 +67,9 @@ app.run(function ($rootScope, $http) {
   );
 });
 
-// CONTROLLER
 
+
+// CONTROLLER
 // index's controller
 app.controller("index", function ($scope) {});
 
@@ -254,11 +261,11 @@ app.controller("logInSignUpPage", function ($scope) {
     }
   }
 });
-
 // END CONTROLLER
 
-// REVEAL
 
+
+// REVEAL
 // Event Listener
 window.addEventListener("load", checkHomePageMobile); // display when load home page
 window.addEventListener("scroll", revealOfBlogPage);
@@ -364,5 +371,4 @@ function revealOfContactUsPage() {
   }
 }
 // END FUNCTION DECLARATION
-
 // END REVEAL
