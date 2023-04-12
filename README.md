@@ -16,11 +16,11 @@ Project title: Rhythm House
 
 ---------------------------------
 
-eProject documentation at https://github.com/imduyan/eProject-Rhythm-House-by-Group-4/blob/main/Documentation
+eProject documentation at https://github.com/ganzzi/eProject-Rhythm-House-by-Group-4/blob/main/Documentation
 
 ---------------------------------
 
-eProject website published at https://imduyan.github.io/eProject-Rhythm-House-by-Group-4/#!/home
+eProject website published at https://ganzzi.github.io/eProject-Rhythm-House-by-Group-4/#!/home
 
 ---------------------------------
 
